@@ -30,6 +30,14 @@ a {
 .header {
   background: #ccc;
 }
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;
+}
+
 .header .header-box {
   overflow: hidden;
   padding: 0px 10px;
