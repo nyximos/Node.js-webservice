@@ -90,8 +90,6 @@ a {
 }
 .header .tnb > ul > li {
   float: left;
-}
-.header .tnb > ul > li {
   display: block;
   padding: 10px;
   color: #000;
@@ -99,7 +97,10 @@ a {
 .header .tnb > ul > li > a {
   display: block;
   padding: 10px;
-  color: #fff;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
 }
 
 .footer {
