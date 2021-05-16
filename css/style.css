@@ -129,11 +129,21 @@ a {
 }
 
 .center {
-  text-align: center;
   margin: auto;
-  width: 50%;
+  width: 77%;
+  height: auto;
+  padding: 100px;
   border: 1px solid gray;
-  padding: 10px;
+
+  text-align: center;
   font-size: 15px;
   font-weight: 500;
 }
+/* .contents {
+  border: 1px solid #bcbcbc;
+  width: 77%;
+  height: 100%;
+  padding: 100px;
+  margin: 100px;
+  float: left;
+} */
