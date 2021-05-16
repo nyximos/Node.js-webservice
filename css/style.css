@@ -35,7 +35,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: #fff;
+  background: red; /*고정바 확인용 */
 }
 
 .header .header-box {
@@ -95,7 +95,7 @@ a {
   color: #000;
 }
 .header .tnb > ul > li > a {
-  display: block;
+  display: inline;
   padding: 10px;
   color: #000;
 }
