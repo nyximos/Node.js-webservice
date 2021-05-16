@@ -127,4 +127,25 @@ a {
   margin: 20px;
   color: #000;
 }
-/*실험해보겠습니다*/
+.contents {
+  border: 1px solid #bcbcbc;
+  width: 77%;
+  height: 100%;
+  padding: 100px;
+  margin: 100px;
+  float: left;
+}
+.contents > div.큰제목 {
+  position: relative;
+  left: 100px;
+  font-weight: 700;
+  font-size: 70px;
+  font-family: "Segoe UI"
+}
+
+.contents > ul.내용 {
+  position: relative;
+  top:100px;
+  left: 100px;
+  
+}
