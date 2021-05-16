@@ -35,7 +35,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: red; /*고정바 확인용 */
+  background: #ccc; /*고정바 확인용 */
 }
 
 .header .header-box {
@@ -105,12 +105,16 @@ a {
 
 .footer {
   background: #fff;
+  width: 100%;
+  bottom: 0%;
+  
 }
 .footer > div {
+  bottom: 0%;
   padding: 10px;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
+  
 }
 .footer > div > div {
   float: left;
@@ -128,24 +132,85 @@ a {
   color: #000;
 }
 .contents {
-  border: 1px solid #bcbcbc;
-  width: 77%;
-  height: 100%;
-  padding: 100px;
-  margin: 100px;
+  
+  position: relative;
+  width: 79.1%;
+  height: 1200px;
+  padding: 0 180px;
   float: left;
 }
 .contents > div.큰제목 {
   position: relative;
+  top: 100px;
   left: 100px;
   font-weight: 700;
   font-size: 70px;
-  font-family: "Segoe UI"
 }
 
 .contents > ul.내용 {
   position: relative;
   top:100px;
   left: 100px;
+  font-size: 20px;  /* 폰트 사이즈 */
+  font-weight:bold; /* 폰트 굵기 지정 */
+  line-height: 3;   /* 텍스트 높이 설정, 수직정렬에도 응용 */
+}
+
+.contents > ul.내용 > li > button.비밀번호재설정 {
+  position: relative;
+  left: 30px;
+  width: 150px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button.문의 {
+  position: relative;
+  left: 30px;
+  width: 50px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button.탈퇴 {
+  position: relative;
+  left: 30px;
+  width: 60px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button:focus {
+  outline: 0; /* 버튼을 눌렸을때 포커스를 없애라 */
+} 
+.contents > ul.내용 > li > button:hover{ /* 마우스를 올렸을때 */
+  background-color: rgba(0, 79, 255, 0.9);
+  cursor: pointer; /* 마우스 커서 포인터를 바꿈 */
+  box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
+}
+
+.contents > ul.내용 > li > button > a {
+  color:white;  /*텍스트 컬러*/
   
 }
