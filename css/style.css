@@ -129,13 +129,9 @@ a {
 }
 
 .center {
+  text-align: center;
   margin: auto;
   width: 50%;
-  border: 3px solid;
+  border: 1px solid gray;
   padding: 10px;
-}
-
-.center {
-  text-align: center;
-  border: 3px solid;
 }
