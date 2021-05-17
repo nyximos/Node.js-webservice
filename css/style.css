@@ -35,7 +35,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: red; /*고정바 확인용 */
+  background: rgb(182, 176, 176);
 }
 
 .header .header-box {
@@ -139,14 +139,17 @@ a {
 }
 .major_contents > div.사진모음 {
   position: relative;
-  top: 63px;
+  
   display: flex;
   border: 1px solid red;
+  align-items: center;
+  height: 100vh;
   
 
 }
 .major_contents > div.사진모음 > a {
   flex:1;
+  
   
 }
 
@@ -162,4 +165,51 @@ a {
 .major_contents > div.사진모음 > a > img.셋사진 {
   height: 100%;
   width: 100%;
+}
+.major_cp_contents {
+  position: relative;
+  height: 90vh;
+  
+}
+
+.major_cp_contents > div > ul.사이드메뉴 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5;
+  position: fixed;
+  width:200px;
+  height:165px;
+  top: 200px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: 10px solid #c0e6ff;
+  border-bottom: 1px solid rgba(77, 77, 77, 0.05);
+  border-right: 1px solid rgba(77, 77, 77, 0.05);
+  border-left: 1px solid rgba(77, 77, 77, 0.05);
+  
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li {
+  
+  border : 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
+  text-align: left;
+  color: #000;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li.전공 {
+  border : 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: #000;
+  z-index: 1;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li > a {
+  color: #000;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li > a:hover {
+  color: #6c5ce7;
+  z-index: 21;
 }
