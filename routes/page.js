@@ -7,11 +7,11 @@ router.use((req,res,next) => {
 })
 
 router.get('/login', (req, res,next) => {
-    res.render('signin', { title: '로그인'});
+    res.render('login', { title: '로그인'});
 });
 
 router.get('/login/check', (req, res) => {
-    res.render('login', { title: '약관동의'});
+    res.render('check', { title: '약관동의'});
 });
 
 router.get('/login/check/signup', (req, res) => {
