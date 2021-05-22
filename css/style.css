@@ -35,7 +35,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: red; /*고정바 확인용 */
+  background: gray; /*고정바 확인용 */
 }
 
 .header .header-box {
@@ -147,3 +147,12 @@ a {
   margin: 100px;
   float: left;
 } */
+
+.one {
+  background-image: url(/Users/kiokio/Desktop/영상/Nebula-2560x1600.jpg);
+  background-size: 300px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid;
+  color: pink;
+}
