@@ -1,0 +1,526 @@
+/* 초기화 */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+div {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  font-family: "Noto Sans KR";
+}
+h1 {
+  font-size: 17px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #ccc;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 9999;
+  background: #ccc; /*고정바 확인용 */
+}
+
+.header .header-box {
+  overflow: hidden;
+  padding: 0px 10px;
+}
+.header h1 {
+  float: left;
+}
+
+.header h1 a {
+  display: block;
+  padding: 10;
+  color: #000;
+}
+.header h1 a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  background: #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.header .gnb {
+  width: 400px;
+  margin: 0 auto;
+}
+.header .gnb > ul {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.header .gnb > ul > li {
+  float: left;
+  margin: 0 10px;
+}
+.header .gnb > ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.header .gnb > ul > li > a:hover {
+  color: #6c5ce7;
+}
+.header .tnb {
+  float: right;
+  margin-top: 11px;
+}
+.header .tnb > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a {
+  display: inline;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
+}
+
+.footer {
+  background: white;
+  width: 100%;
+  bottom: 0px;
+  height: 50px;
+  
+}
+
+.footer > div {
+  bottom: 0%;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
+
+.contents {
+
+  width: 100%;
+  height: 750px;
+}
+.contents > div.사진모음 {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-around;
+  overflow: hidden;
+  
+  
+}
+.contents > div.사진모음 > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  overflow: hidden;
+  transition: all 1.2s;
+  
+}
+
+
+.contents > div.사진모음 > a:hover {
+  transform: scale(1.2);
+  
+}
+
+.contents > div.사진모음 > a > img {
+  
+  width: 90%;
+  height: 90%;
+}
+
+
+.major_cp_contents {
+  
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  
+}
+
+.major_cp_contents > div > ul.사이드메뉴 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2.5;
+  position: fixed;
+  width:200px;
+  height:165px;
+  top: 250px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top: 10px solid #c0e6ff;
+  border-bottom: 1px solid rgba(77, 77, 77, 0.05);
+  border-right: 1px solid rgba(77, 77, 77, 0.05);
+  border-left: 1px solid rgba(77, 77, 77, 0.05);
+  
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li {
+  
+  border : 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  color: #000;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li.전공 {
+  border : 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: #000;
+  z-index: 1;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li > a {
+  color: #000;
+}
+
+.major_cp_contents > div > ul.사이드메뉴 > li > a:hover {
+  color: #6c5ce7;
+  z-index: 21;
+}
+
+.공백 {
+  position: relative;
+  width: 100%;
+  height: 7%;
+}
+
+.section {
+  height: 90px;
+  display: flex;
+  
+}
+
+.section > div {
+  float: left;
+  flex: 1;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.major_cp_contents > a {
+  display:block;
+  width:auto;
+  text-decoration: none;
+  margin:0px;
+  padding: 0px;
+}
+
+.major_cp_contents > a .screen {
+  position: relative;
+  overflow: hidden;
+  
+  
+}
+
+.major_cp_contents > a .screen::after {
+  content:'';
+  display:block;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.major_cp_contents > a:hover .screen::after {
+  opacity:1;
+}
+
+.major_cp_contents > a .screen .글위 {
+  position: absolute;
+  bottom: 150%;
+  left:30px;
+  z-index: 2;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.major_cp_contents > a:hover .글위 {
+  bottom:60%;
+}
+
+.major_cp_contents > a .screen .글아래 {
+  position: absolute;
+  top: 150%;
+  left:30px;
+  z-index: 2;
+  color: #fff;
+  font-size: 40px;
+  transition: all .5s;
+}
+
+.major_cp_contents > a:hover .글아래 {
+  top:52%;
+}
+
+.major_cp_contents > a .screen .글아래2 {
+  position: absolute;
+  top: 150%;
+  left:30px;
+  z-index: 2;
+  color: #fff;
+  font-size: 40px;
+  transition: all .5s;
+}
+
+.major_cp_contents > a:hover .글아래2 {
+  top:60%;
+}
+
+.major_cp_contents > a > div.screen > .img {
+  width: 100%;
+}
+
+
+.영역1 {
+  position: relative;
+  top: 50px;
+  height: 600px;
+  text-align: center;
+  width: 100%;
+  max-width: 1300px;
+  left: 50%;
+  margin-left: -650px;
+}
+
+.영역1_제목 {
+  width: 100%;
+  height: 100px;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 70px;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.영역1_부제목 {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.영역1_박스 {
+  max-width:1200px;
+  width:100%;
+  margin:0 auto; /* block요소 외부 간격 */
+  height: 400px;
+}
+
+.영역1_박스 > ul {
+  font-size: 0; /* 폰트크기 없애서 간격줄임*/
+  
+}
+
+.영역1_박스 > ul > li {
+  display:inline-block;
+  vertical-align:top; /* 인라인 세로정렬*/
+  width:33.3%; /* 가로크기*/
+  
+  height: 400px;
+  
+}
+
+.영역1_박스 > ul > li > a {
+  display:block;
+  width:auto;
+  text-decoration: none;
+  margin: 5px;
+  height: 100%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen {
+  position:relative;
+  overflow:hidden;
+  height: 100%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen::after {
+  content:'';
+  display:block;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background:rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.영역1_박스 > ul > li > a:hover .영역1_screen::after {
+  opacity: 1;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen .영역1_글위 {
+  position: absolute;
+  bottom: 150%;
+  left: 30px;
+  z-index: 2;
+  color: #fff;
+  font-size:26px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.영역1_박스 > ul > li > a:hover .영역1_글위 {
+  bottom: 80%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen .영역1_글위2 {
+  position: absolute;
+  bottom: 170%;
+  left: 30px;
+  z-index: 2;
+  color:#fff;
+  font-size:26px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.영역1_박스 > ul > li > a:hover .영역1_글위2 {
+  bottom: 60%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen .영역1_글위3 {
+  position: absolute;
+  bottom: 190%;
+  left: 30px;
+  z-index: 2;
+  color:#fff;
+  font-size:26px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.영역1_박스 > ul > li > a:hover .영역1_글위3 {
+  bottom: 40%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen .영역1_글위4 {
+  position: absolute;
+  bottom: 210%;
+  left: 30px;
+  z-index: 2;
+  color:#fff;
+  font-size:26px;
+  font-weight: 900;
+  transition: all .5s;
+}
+
+.영역1_박스 > ul > li > a:hover .영역1_글위4 {
+  bottom: 20%;
+}
+
+.영역1_박스 > ul > li > a .영역1_screen img {
+  width:100%;
+}
+
+.영역2 {
+  position: relative;
+  top: 50px;
+  height: 700px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: -100;
+  
+}
+
+.영역2_제목 {
+  width: 100%;
+  height: 100px;
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 70px;
+  top: 30px;
+  position: relative;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.영역2_박스 {
+  top: 50px;
+  left: 50%;
+  margin-left: -600px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  
+}
+
+.영역2_박스 > div > img {
+  width: 100%;
+  
+}
+
+.영역2_박스 > div {
+  float: left;
+  margin: 10px;
+  padding: 10px;
+  max-width: 400px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 150px;
+  font-size: 26px;
+  font-weight: bold;
+  
+}
