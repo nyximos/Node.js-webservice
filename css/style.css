@@ -149,11 +149,26 @@ a {
 } */
 
  .bg {
-  background-image: url("/Users/kiokio/Desktop/영상/Nebula-2560x1600.jpg");
-  height: 700px;
+  background-image: url("/Users/kiokio/Desktop/영상/sun.png");
+  height: 720px;
   width: 100%;
 }
 
-.login {
-  
+.lo {
+  position: absolute;
+  top: 280px;
+  right: 100px;
+
+  padding: 100px;
+  background-color: #fff;
+}
+
+.bu{
+  background-color: #19ce60;
+  border: #15c654;
+  color: #fff;
+  font-size: 100;
+  font-weight: 700;
+  height: 50px;
+  width: 200px;
 }
