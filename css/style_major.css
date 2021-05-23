@@ -149,6 +149,7 @@ a {
   overflow: hidden;
   
   
+  
 }
 .contents > div.사진모음 > a {
   display: flex;
@@ -157,6 +158,7 @@ a {
   padding: 10px;
   overflow: hidden;
   transition: all 1.2s;
+  
   
 }
 
@@ -243,6 +245,7 @@ a {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
+  
 }
 
 .major_cp_contents > a {
@@ -251,11 +254,14 @@ a {
   text-decoration: none;
   margin:0px;
   padding: 0px;
+  
+  
 }
 
 .major_cp_contents > a .screen {
   position: relative;
   overflow: hidden;
+  
   
   
 }
@@ -287,6 +293,7 @@ a {
   font-size: 70px;
   font-weight: 900;
   transition: all .5s;
+  
 }
 
 .major_cp_contents > a:hover .글위 {
@@ -395,6 +402,8 @@ a {
   text-decoration: none;
   margin: 5px;
   height: 100%;
+  border-radius: 60px;
+  
 }
 
 .영역1_박스 > ul > li > a .영역1_screen {
@@ -415,6 +424,7 @@ a {
   z-index: 1;
   opacity: 0;
   transition: all .5s;
+  border-radius: 60px;
 }
 
 .영역1_박스 > ul > li > a:hover .영역1_screen::after {
