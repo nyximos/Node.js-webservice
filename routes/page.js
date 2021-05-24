@@ -1,10 +1,23 @@
 const express = require('express');
+const {isLoggedIn, isNotLoggedIn} = require('./middlewares');
 const router = express.Router();
 
 router.use((req,res,next) => {
     // 나중에 템플릿 엔진에서 사용할 변수들을 선언하는 곳
+    res.locals.user = req.user;
+    res.locals.followerCount = 0;
+    res.locals.followingCount = 0;
+    res.locals.followerIdList = [];
     next();
-})
+});
+
+router.get('./profile',isLoggedIn, (req, res) => {
+    res.render('profile', {title : '내 정보 - NodeBird'});
+});
+
+router.get('./join', isNotLoggedIn, (req, res) => {
+    res.render('join', {title : '회원가입 - NodeBird'});
+});
 
 router.get('/login', (req, res,next) => {
     res.render('login', { title: '로그인'});
