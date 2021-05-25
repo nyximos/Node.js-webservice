@@ -5,6 +5,7 @@ const path = require('path');
 const session = require('express-session');
 const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
+const datebase = require('DB.js');
 
 dotenv.config();
 const pageRouter = require('./routes/page');
@@ -14,6 +15,7 @@ app.set('port', process.env.PORT || 8001);
 app.set('view engine', 'html');
 nunjucks.configure('view', {
   express: app,
+  
   watch: true,
 });
 
