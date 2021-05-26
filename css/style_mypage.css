@@ -145,6 +145,20 @@ a {
   left: 100px;
   font-weight: 700;
   font-size: 70px;
+  animation-duration: 1s;
+  animation-name: 큰제목move;
+}
+
+@keyframes 큰제목move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+
+  to {
+    margin-left:0%;
+    width: auto;
+  }
 }
 
 .contents > ul.내용 {
@@ -154,6 +168,159 @@ a {
   font-size: 20px;  /* 폰트 사이즈 */
   font-weight:bold; /* 폰트 굵기 지정 */
   line-height: 3;   /* 텍스트 높이 설정, 수직정렬에도 응용 */
+}
+
+.contents > ul > li > button.문의 {
+  animation-duration: 2.2s;
+  animation-name: 문의버튼move;
+}
+
+@keyframes 문의버튼move {
+  from {
+    margin-left: 50%;
+    width: 50px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 50px;
+  }
+}
+
+.contents > ul > li > button.탈퇴 {
+  animation-duration: 3.0s;
+  animation-name: 탈퇴버튼move;
+}
+
+@keyframes 탈퇴버튼move {
+  from {
+    margin-left: 50%;
+    width: 60px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 60px;
+  }
+}
+
+.아이디 {
+  animation-duration: 1.2s;
+  animation-name: 아이디move;
+}
+
+@keyframes 아이디move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.이름 {
+  animation-duration: 1.4s;
+  animation-name: 이름move;
+}
+
+@keyframes 이름move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.비밀번호 {
+  animation-duration: 1.6s;
+  animation-name: 비밀번호move;
+}
+
+@keyframes 비밀번호move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.비밀번호재설정 {
+  animation-duration: 1.8s;
+  animation-name: 비밀번호재설정move;
+}
+
+@keyframes 비밀번호재설정move {
+  from{
+    margin-left: 50%;
+    width: 150px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 150px;
+  }
+}
+
+.문의 {
+  animation-duration: 2.0s;
+  animation-name: 문의move;
+}
+
+@keyframes 문의move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.탈퇴 {
+  animation-duration: 2.4s;
+  animation-name: 탈퇴move;
+}
+
+@keyframes 탈퇴move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.유의사항 {
+  animation-duration: 2.6s;
+  animation-name: 유의사항move;
+}
+
+@keyframes 유의사항move {
+  from {
+    margin-left: 50%;
+    width:auto;
+  }
+
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
 }
 
 .contents > ul.내용 > li > button.비밀번호재설정 {
@@ -214,3 +381,4 @@ a {
   color:white;  /*텍스트 컬러*/
   
 }
+
