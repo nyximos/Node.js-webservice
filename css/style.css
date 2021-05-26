@@ -154,16 +154,19 @@ a {
   width: 100%;
 }
 
-.lo {
+.로그인 {
   position: absolute;
-  top: 280px;
+  top: 300px;
   right: 100px;
+  text-align: right;
 
-  padding: 100px;
-  background-color: #fff;
+  padding: 10px;
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
 }
 
-.bu{
+.로그인버튼 {
+  cursor: pointer;
   background-color: #19ce60;
   border: #15c654;
   color: #fff;
