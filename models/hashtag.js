@@ -15,6 +15,8 @@ module.exports = class Hashtag extends Sequelize.Model {
             modelName: 'Hangtag',
             tableName: 'hangtag',
             paranoid: false,
+            charset: 'utf8',
+                collate: 'utf8_general_ci',
           
         });
     }
