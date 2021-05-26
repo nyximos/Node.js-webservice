@@ -145,20 +145,30 @@ a {
   left: 100px;
   font-weight: 700;
   font-size: 70px;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-name: 큰제목move;
 }
 
 @keyframes 큰제목move {
-  from {
+  0% {
     margin-left: 50%;
     width: auto;
   }
 
-  to {
-    margin-left:0%;
+  33% {
+    margin-left: 0%;
+    width:auto;
+  }
+  43% {
+    margin-left: 10%;
     width: auto;
   }
+
+  73% {
+    margin-left: 0%;
+    width: auto;
+  }
+
 }
 
 .contents > ul.내용 {
