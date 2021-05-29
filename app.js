@@ -60,3 +60,7 @@ app.use('/', pageRouter);
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기중');
 });
+
+// express에서 정적 파일 제공
+// https://lycaeum.dev/ko/questions/5924072
+app.use('*/css',express.static('public/css'));
