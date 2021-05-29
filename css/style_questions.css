@@ -1,10 +1,15 @@
 /* 초기화 */
 @import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url(media_questions.css);
+@import url(css_questions);
 *,
 :after,
 :before {
   box-sizing: inherit;
+}
+html {
+  font-size: 10px;
 }
 div {
   display: block;
@@ -35,7 +40,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: red; /*고정바 확인용 */
+  background: ccc; /*고정바 확인용 */
 }
 
 .header .header-box {
@@ -137,84 +142,47 @@ a {
   width: 80vw;
   left: 180px;
 }
+/*게시판 만들기 */
 
-.contents > form {
-  position: relative;
-  left: 10%;
+.board_wrap {
+  width: 1000px; /* 가로 1000px 줌 */
+  margin: 100px auto; /* auto는 가운데정렬 */
 }
 
-table {
-  border-collapse: collapse;
+.board_title {
+  margin-bottom: 30px; /* 타이틀 밑에 30px 공간을 줌 */
 }
 
-caption {
-  display: none;
+.board_title strong {
+  font-size: 3rem; /* 타이틀 안에 strong을 쓴 부분에 글자 크기를 3rem으로 설정. rem은 최상위 태그 html에 3을 곱한 값*/
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.board_title p {
+  margin-top: 5px;
+  font-size:  1.4rem;
 }
 
-.board_list_wrap {
-  padding: 50px;
-}
-
-.board_list {
-  width: 100%;
-  border-top: 2px solid green;
-}
-
-.board_list tr {
-  border-bottom: 1px solid #ccc;
-}
-
-.board_list th,
-.board_list td {
-  padding: 10px;
-  font-size: 14px;
-}
-
-.board_list td {
-  text-align: center;
-}
-
-.board_list .tit {
-  text-align: left;
-}
-
-.board_list .tit:hover {
-  text-decoration: underline;
-}
-
-.board_list_wrap .paging {
-  margin-top: 20px;
-  text-align: center;
+.bt_wrap {
+  margin-top: 30px;
   font-size: 0;
+  text-align: center; /* a태그를 중앙 정렬시키는데 글자도 상속받기때문에 중앙정렬 */
 }
-.board_list_wrap .paging a {
+
+.bt_wrap a {  /* 클래스 bt_wrap 안의 모든 a 태그 */
   display: inline-block;
+  min-width: 80px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-size: 1.4rem;
   margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 100px;
-  font-size: 12px;
 }
-.board_list_wrap .paging a:first-child {
+
+.bt_wrap a:first-child { /* 첫번째 a태그는 */
   margin-left: 0;
 }
 
-.board_list_wrap .paging a.bt {
-  border: 1px solid #eee;
-  background: #eee;
-}
-
-.board_list_wrap .paging a.num {
-  border: 1px solid green;
-  font-weight: 600;
-  color: green;
-}
-
-.board_list_wrap .paging a.num.on {
-  background: green;
+.bt_wrap a.on { /* bt_wrap 클래스 안에 a태그 클래스 on 에 대해 설정 */
+  background: #000;
   color: #fff;
 }
