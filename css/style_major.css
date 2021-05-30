@@ -147,6 +147,7 @@ a {
   height: 100vh;
   justify-content: space-around;
   overflow: hidden;
+  opacity: 0.95;
   
   
   
@@ -159,7 +160,10 @@ a {
   overflow: hidden;
   transition: all 1.2s;
   
-  
+}
+
+.contents > div > a > img {
+  border-radius: 2%;
 }
 
 
@@ -242,7 +246,7 @@ a {
 .section > div {
   float: left;
   flex: 1;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   
@@ -500,9 +504,13 @@ a {
   top: 50px;
   height: 700px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.24);
+  background-color: rgba(82, 82, 82, 0.199);
   z-index: -100;
   
+}
+
+.영역2 img {
+  border-radius: 5%;
 }
 
 .영역2_제목 {
