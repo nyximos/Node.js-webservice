@@ -11,7 +11,7 @@ div {
 }
 body {
   margin: 0;
-  padding: 0;
+  padding: ;
   font-size: 0.75em;
   font-family: "Noto Sans KR";
 }
@@ -175,3 +175,5 @@ a {
   height: 50px;
   width: 200px;
 }
+
+/*회원          가입*/
