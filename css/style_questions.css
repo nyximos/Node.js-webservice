@@ -1,8 +1,6 @@
 /* 초기화 */
 @import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
-@import url(media_questions.css);
-@import url(css_questions);
 *,
 :after,
 :before {
