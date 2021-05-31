@@ -50,6 +50,10 @@ router.get('/questions', (req, res) => {
     res.render('questions', { title: '문의'});
 });
 
+router.get('/questions/write', (req, res) => {
+    res.render('questions_write', { title: '문의글쓰기'});
+});
+
 
 router.get('/', (req,res,next) => {
     res.render('index', {title: 'node.js-webservice'});
