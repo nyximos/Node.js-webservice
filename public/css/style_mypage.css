@@ -1,0 +1,394 @@
+/* 초기화 */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+div {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  font-family: "Noto Sans KR";
+}
+h1 {
+  font-size: 17px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #ccc;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: #ccc; /*고정바 확인용 */
+}
+
+.header .header-box {
+  overflow: hidden;
+  padding: 0px 10px;
+}
+.header h1 {
+  float: left;
+}
+
+.header h1 a {
+  display: block;
+  padding: 10;
+  color: #000;
+}
+.header h1 a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  background: #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.header .gnb {
+  width: 400px;
+  margin: 0 auto;
+}
+.header .gnb > ul {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.header .gnb > ul > li {
+  float: left;
+  margin: 0 10px;
+}
+.header .gnb > ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.header .gnb > ul > li > a:hover {
+  color: #6c5ce7;
+}
+.header .tnb {
+  float: right;
+  margin-top: 11px;
+}
+.header .tnb > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a {
+  display: inline;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
+}
+
+.footer {
+  background: #fff;
+  width: 100%;
+  bottom: 0%;
+  
+}
+.footer > div {
+  bottom: 0%;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
+.contents {
+  
+  position: relative;
+  width: 79.1%;
+  height: 1200px;
+  padding: 0 180px;
+  float: left;
+}
+.contents > div.큰제목 {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  font-weight: 700;
+  font-size: 70px;
+  animation-duration: 3s;
+  animation-name: 큰제목move;
+}
+
+@keyframes 큰제목move {
+  0% {
+    margin-left: 50%;
+    width: auto;
+  }
+
+  33% {
+    margin-left: 0%;
+    width:auto;
+  }
+  43% {
+    margin-left: 10%;
+    width: auto;
+  }
+
+  73% {
+    margin-left: 0%;
+    width: auto;
+  }
+
+}
+
+.contents > ul.내용 {
+  position: relative;
+  top:100px;
+  left: 100px;
+  font-size: 20px;  /* 폰트 사이즈 */
+  font-weight:bold; /* 폰트 굵기 지정 */
+  line-height: 3;   /* 텍스트 높이 설정, 수직정렬에도 응용 */
+}
+
+.contents > ul > li > button.문의 {
+  animation-duration: 2.2s;
+  animation-name: 문의버튼move;
+}
+
+@keyframes 문의버튼move {
+  from {
+    margin-left: 50%;
+    width: 50px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 50px;
+  }
+}
+
+.contents > ul > li > button.탈퇴 {
+  animation-duration: 3.0s;
+  animation-name: 탈퇴버튼move;
+}
+
+@keyframes 탈퇴버튼move {
+  from {
+    margin-left: 50%;
+    width: 60px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 60px;
+  }
+}
+
+.아이디 {
+  animation-duration: 1.2s;
+  animation-name: 아이디move;
+}
+
+@keyframes 아이디move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.이름 {
+  animation-duration: 1.4s;
+  animation-name: 이름move;
+}
+
+@keyframes 이름move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.비밀번호 {
+  animation-duration: 1.6s;
+  animation-name: 비밀번호move;
+}
+
+@keyframes 비밀번호move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.비밀번호재설정 {
+  animation-duration: 1.8s;
+  animation-name: 비밀번호재설정move;
+}
+
+@keyframes 비밀번호재설정move {
+  from{
+    margin-left: 50%;
+    width: 150px;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 150px;
+  }
+}
+
+.문의 {
+  animation-duration: 2.0s;
+  animation-name: 문의move;
+}
+
+@keyframes 문의move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.탈퇴 {
+  animation-duration: 2.4s;
+  animation-name: 탈퇴move;
+}
+
+@keyframes 탈퇴move {
+  from {
+    margin-left: 50%;
+    width: auto;
+  }
+  
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.유의사항 {
+  animation-duration: 2.6s;
+  animation-name: 유의사항move;
+}
+
+@keyframes 유의사항move {
+  from {
+    margin-left: 50%;
+    width:auto;
+  }
+
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+
+.contents > ul.내용 > li > button.비밀번호재설정 {
+  position: relative;
+  left: 30px;
+  width: 150px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button.문의 {
+  position: relative;
+  left: 30px;
+  width: 50px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button.탈퇴 {
+  position: relative;
+  left: 30px;
+  width: 60px; /*가로폭 */
+  height: 40px; /*세로폭 */
+  background-color: #004fff;
+  box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+           /* x축 y축 Blur값 헥사코드 */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px; /* 라운드 값 */
+  border:none; /* 테두리 없앰 */
+  transition: 0.3s; /* 효과 부드럽게 만듬 */
+  color:white;  /*텍스트 컬러*/
+}
+.contents > ul.내용 > li > button:focus {
+  outline: 0; /* 버튼을 눌렸을때 포커스를 없애라 */
+} 
+.contents > ul.내용 > li > button:hover{ /* 마우스를 올렸을때 */
+  background-color: rgba(0, 79, 255, 0.9);
+  cursor: pointer; /* 마우스 커서 포인터를 바꿈 */
+  box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
+}
+
+.contents > ul.내용 > li > button > a {
+  color:white;  /*텍스트 컬러*/
+  
+}
+
