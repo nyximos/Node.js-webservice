@@ -172,8 +172,20 @@ a {
   color: #fff;
   font-size: 100;
   font-weight: 700;
-  height: 50px;
+  height: 35px;
   width: 200px;
 }
+
+.로그인버튼2 {
+  cursor: pointer;
+  background-color: #f6dd00;
+  border: #f6dd00;
+  color: #fff;
+  font-size: 100;
+  font-weight: 700;
+  height: 35px;
+  width: 200px;
+}
+
 
 /*회원          가입*/
