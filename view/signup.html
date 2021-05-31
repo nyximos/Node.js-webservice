@@ -1,112 +1,155 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <head>
             <meta charset="UTF-8">
-            <link rel="stylesheet" href="./css/style.css">
+            <link rel="stylesheet" href="/css/style_signup.css">
     </head>
-
+    
     <body>
-        <div class="header  fixed" style="inset: 0px auto auto 0px;">
-            <div class="header-box">
-                <h1>
-                    <a href="/">
-                    <span>TeamName</span>
-                    </a>
-                    <!-- <img src="로고이미지 위치" alt> -->
-                </h1>
-                <div class="tnb">
-                    <ul>
-                        <li><a href="/login">로그인</a></li>
-                        <li><a href="/login/check">회원가입</a></li>
-                        <!-- 
-                        <li>로그아웃</li>
-                        <li>정보수정</li>
-                        -->
-                    </ul>
-                </div>
-                <div class="gnb">
-                    <ul>
-                        <li><a href="/intro">조원소개</a></li>
-                        <li><a href="/major">전공소개</a></li>
-                        <li><a href="/questions">고객센터</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="contents">
-            <br><br><br><br>
+            <br><br><br>
         </div>
 
-        <br><br><br><br><br><br>
-        <div class="center">
-            <ul>
-                <li> 아이디 </li>
-                <li> <input type="text"> </li>
-                <br>
-                <li> 비밀번호 </li>
-                <li> <input type="password"> </li>
-                <li> <input type="password"> </li>
-                <br>
-                <li> 이름 </li>
-                <li> <input type="text"> </li>
-                <br>
-                <li> 암호 찾기 질문 <select name="1" id=""> 
-                    <option>존경하는 인물은 ? </option>
-                    <option>1111</option>
-                    <option>1111</option>
-                    <option>1111</option>
-                    <option>1111</option>
-                    <option>1111</option> </select>
-                    <br>
-                    암호 찾기 질문 답변 <input type="text">
-                </li>
-                <br>
-                <li> 전화번호 </li>
-                <li> <input type="text"> </li>
-                <br>
-                <li> 생년월일 </li>
-                <input type="text" placeholder="년" style="width: 50px;"> <select name="2" id="" style="width: 50px;">
-                    <option>월</option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                    <option>07</option>
-                    <option>08</option>
-                    <option>09</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                </select>
-
-                <input type="text" style="width: 30px; width: 30;">
-                </li>
-                <br><br>
-                <li> 성별 <select name="2" id="">
-                    <option>선택</option>
-                    <option>남자</option>
-                    <option>여자</option>
-                    </select> 
-                </li>
-                <br>
-                <li> 학번 <input type="text"> </li>
-                <br>
-                <li> <button type="button">가입하기</button> </li>
-
-
-            </ul>
+        <div class="logo">
+            <a href="http://www.yju.ac.kr">안녕</a>
         </div>
-s
-        </div>
+            <br>
+        <div id="wrapper">
 
+            <!-- content-->
+            <div id="content">
 
+                <!-- ID -->
+                <div>
+                    <h3 class="join_title">
+                        <label for="id">아이디</label>
+                    </h3>
+                    <span class="box int_id">
+                        <input type="text" id="id" class="int" maxlength="20">
+                        
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW1 -->
+                <div>
+                    <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
+                    <span class="box int_pass">
+                        <input type="password" id="pswd1" class="int" maxlength="20">
+                        <span id="alertTxt">사용불가</span>
+                        <img src="./ch/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- PW2 -->
+                <div>
+                    <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
+                    <span class="box int_pass_check">
+                        <input type="password" id="pswd2" class="int" maxlength="20">
+                        <img src="./ch/m_icon_check_disable.png" id="pswd2_img1" class="pswdImg">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- NAME -->
+                <div>
+                    <h3 class="join_title"><label for="name">이름</label></h3>
+                    <span class="box int_name">
+                        <input type="text" id="name" class="int" maxlength="20">
+                    </span>
+                    <span class="error_next_box"></span>
+                </div>
+
+                <!-- BIRTH -->
+                <div>
+                    <h3 class="join_title"><label for="yy">생년월일</label></h3>
+
+                    <div id="bir_wrap">
+                        <!-- BIRTH_YY -->
+                        <div id="bir_yy">
+                            <span class="box">
+                                <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4자)">
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_MM -->
+                        <div id="bir_mm">
+                            <span class="box">
+                                <select id="mm" class="sel">
+                                    <option>월</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>                                    
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_DD -->
+                        <div id="bir_dd">
+                            <span class="box">
+                                <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
+                            </span>
+                        </div>
+
+                    </div>
+                    <span class="error_next_box"></span>    
+                </div>
+
+                <!-- GENDER -->
+                <div>
+                    <h3 class="join_title"><label for="gender">성별</label></h3>
+                    <span class="box gender_code">
+                        <select id="gender" class="sel">
+                            <option>성별</option>
+                            <option value="M">남자</option>
+                            <option value="F">여자</option>
+                        </select>                            
+                    </span>
+                    <span class="error_next_box">필수 정보입니다.</span>
+                </div>
+
+                <!-- EMAIL -->
+                <div>
+                    <h3 class="join_title"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
+                    <span class="box int_email">
+                        <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
+                    </span>
+                    <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>    
+                </div>
+
+                <!-- MOBILE -->
+                <div>
+                    <h3 class="join_title"><label for="phoneNo">휴대전화</label></h3>
+                    <span class="box int_mobile">
+                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
+                    </span>
+                    <span class="error_next_box"></span>    
+                </div>
+
+                <!-- JOIN BTN-->
+                <div class="btn_area">
+                    <button type="button" id="btnJoin">
+                        <span><a href="./index.html">가입하기</a></span>
+                    </button>
+                </div>
+
+        <script src="./js/123.js"></script>
         <div class="footer">
             <div>
-                <div class="f-logo"><h1><a href="/"><span>TeamName</span></a></h1></div>
+                <div class="f-logo"><h1><a href="./index.html"><span>TeamName</span></a></h1></div>
                 <div class="f-copy"><p>copyright(c) TeamName. All Rights Reserved</p></div>
             </div>
         </div>
+
     </body>
 </html>
