@@ -64,6 +64,5 @@ app.listen(app.get('port'), () => {
 // express에서 정적 파일 제공
 // https://lycaeum.dev/ko/questions/5924072
 app.use('*/css',express.static('public/css'));
-
 app.use('*/js',express.static('public/js'));
 app.use('*/images',express.static('public/images'));
