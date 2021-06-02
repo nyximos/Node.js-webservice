@@ -36,7 +36,6 @@ a {
   width: 100%;
   z-index: 9999;
   background: gray; /*고정바 확인용 */
-  /* opacity: 0.9; */
 }
 
 .header .header-box {
@@ -131,7 +130,7 @@ a {
 
 .center {
   margin: auto;
-  width: 77%;
+  width: 30%;
   height: auto;
   padding: 100px;
   border: 1px solid gray;
@@ -140,53 +139,5 @@ a {
   font-size: 15px;
   font-weight: 500;
 }
-/* .contents {
-  border: 1px solid #bcbcbc;
-  width: 77%;
-  height: 100%;
-  padding: 100px;
-  margin: 100px;
-  float: left;
-} */
 
- .bg {
-  background-image: url("/Users/kiokio/Desktop/영상/sun.png");
-  height: 720px;
-  width: 100%;
-}
-
-.로그인 {
-  position: absolute;
-  top: 300px;
-  right: 100px;
-  text-align: right;
-
-  padding: 10px;
-  background-color: #f7f9fa;
-  border: 1px solid #dae1e6;
-}
-
-.로그인버튼 {
-  cursor: pointer;
-  background-color: #19ce60;
-  border: #15c654;
-  color: #fff;
-  font-size: 100;
-  font-weight: 700;
-  height: 35px;
-  width: 200px;
-}
-
-.로그인버튼2 {
-  cursor: pointer;
-  background-color: #f6dd00;
-  border: #f6dd00;
-  color: #fff;
-  font-size: 100;
-  font-weight: 700;
-  height: 35px;
-  width: 200px;
-}
-
-
-/*회원          가입*/
+/* 약관동의 */
