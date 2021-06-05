@@ -25,7 +25,7 @@
           <input type="text" name="hashtag" placeholder="태그 검색">
           <button class="btn">검색</button>
         </form>
-        <h1 id="clock" style="color:gray;">00:00</h1> //현재시간
+        <h1 id="clock" style="color:gray;">00:00</h1> <!-- 현재시간 -->
         {% for twit in twits %}
           <div class="twit">
             <input type="hidden" value="{{twit.User.id}}" class="twit-user-id">
@@ -36,7 +36,7 @@
             {% endif %}
             <div class="twit-content">{{twit.content}}</div>
             <div class="twit-content">{{twit.updatedAt}}</div>
-            
+      
             {% if twit.img %}
               <div class="twit-img"><img src="{{twit.img}}" alt="섬네일"></div>
             {% endif %}
@@ -141,5 +141,9 @@ init();
         }
       });
     });
+
+
+    
+    
   </script>
 {% endblock %}
