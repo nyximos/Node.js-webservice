@@ -4,12 +4,7 @@ module.exports = class Post extends Sequelize.Model {
   static init(sequelize) {    // 테이블 생성을 위해 
     return super.init({
       // field설정, id필드는 자동으로 프라이머리키로서 생성
-      id: { // 글번호
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        // comment: '글 ID', // 설명
-      },
+      
       content: {
         type: Sequelize.STRING(1000),
         allowNull: false,
@@ -18,11 +13,8 @@ module.exports = class Post extends Sequelize.Model {
         type: Sequelize.STRING(200),
         allowNull: true,
       },
-      create_at: {  // 글작성시간
-        type: Sequelize.DATE,
-        allowNull: true,
-        defaultValue: Sequelize.NOW,
-        },
+      
+      
     }, {
       sequelize,
       timestamps: true,
