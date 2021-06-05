@@ -161,9 +161,11 @@ a {
   right: 100px;
   text-align: right;
 
-  padding: 10px;
+  padding: 20px;
   background-color: #f7f9fa;
   border: 1px solid #dae1e6;
+  height: 100px;
+  width: 210px;
 }
 
 .로그인버튼 {
@@ -188,5 +190,7 @@ a {
   width: 200px;
 }
 
-
-/*회원          가입*/
+.te {
+  height: 100px;
+  width: 50px;
+}
