@@ -43,18 +43,18 @@
         <br><br><br><br><br><br>
         <div class="center">
             <form>
-            <ul>
-                <li> <input type="checkbox" name="chk"> 모두동의</li>
+            <ul class="12">
+                <li> <input type="checkbox" name="allchk" onclick='selectAll(this)'> 모두동의</li>
+                <br>
                 <br>
 
-                <li> <input type="checkbox" name="chk" required>이용약관 동의 </li>
-                <br>
+                <li> <input type="checkbox" name="ok" >이용약관 동의 </li>
 
                 <li> <textarea rows="10" cols= "50">이용약관 동의</textarea> </li>
 
                 <br><br><br><br><br>
 
-                <li> <input type="checkbox" name="chk"> 개인정보 수집 및 이용동의 </li>
+                <li> <input type="checkbox" name="ok" > 개인정보 수집 및 이용동의 </li>
 
                 <li> <textarea rows="10" cols= "50">개인 정보 수집 및 이용 동의</textarea> </li>
 
@@ -66,6 +66,7 @@
             </form>
         </div>
 
+        <script src="./js/check.js"></script>
  
         <div class="footer">
             <div>
