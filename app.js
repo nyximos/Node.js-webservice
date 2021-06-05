@@ -13,7 +13,7 @@ const authRouter = require('./routes/auth');
 const postRouter = require('./routes/post');
 const userRouter = require('./routes/user');
 const { sequelize } = require('./models');
-const passportConfig = require('./passport');
+const passportConfig = require('./passport');   // require('./passport/index.js')와 같습니다.
 
 const app = express();
 passportConfig(); // 패스포트 설정
