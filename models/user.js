@@ -30,15 +30,15 @@ module.exports = class User extends Sequelize.Model {
         },
     birth: {
         type: Sequelize.STRING(15),
-        allowNull: false,
+        allowNull: true,
         },
     gender: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         },
      mobile: {  // 전화번호
         type: Sequelize.STRING(15),
-        allowNull: false,
+        allowNull: true,
         },
      provider: {      // local 또는 kakao (google, facebook)
         type: Sequelize.STRING(10),
