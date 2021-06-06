@@ -8,9 +8,6 @@ function App() {
     const [position, setPosition] = useState("");
     const [contact, setContact] = useState("");
 
-    const displayInfo = () => {
-      console.log(name + studentId + age + position + contact)
-    }
 
     return (
         <div className="App">
@@ -45,7 +42,7 @@ function App() {
                     onChange={(event) => {
                         setContact(event.target.value);
                     }}/>
-                <button onClick={displayInfo}>Add Member</button>
+                <button>Add Member</button>
             </div>
         </div>
     );
