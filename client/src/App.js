@@ -12,6 +12,7 @@ function App() {
         <input type="text" />
         <label>Contact:</label>
         <input type="text" />
+        <button>Add Member</button>
       </div>
     </div>
   );
