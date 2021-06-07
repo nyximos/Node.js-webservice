@@ -1,0 +1,184 @@
+/* 초기화 */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+dd {
+  margin-inline-start: 0;
+}
+html {
+  font-size: 10px;
+}
+div {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  font-family: "Noto Sans KR";
+}
+h1 {
+  font-size: 17px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #ccc;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: ccc; /*고정바 확인용 */
+}
+
+.header .header-box {
+  overflow: hidden;
+  padding: 0px 10px;
+}
+.header h1 {
+  float: left;
+}
+
+.header h1 a {
+  display: block;
+  padding: 10;
+  color: #000;
+}
+.header h1 a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  background: #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.header .gnb {
+  width: 400px;
+  margin: 0 auto;
+}
+.header .gnb > ul {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.header .gnb > ul > li {
+  float: left;
+  margin: 0 10px;
+}
+.header .gnb > ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.header .gnb > ul > li > a:hover {
+  color: #6c5ce7;
+}
+.header .tnb {
+  float: right;
+  margin-top: 11px;
+}
+.header .tnb > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a {
+  display: inline;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
+}
+
+.footer {
+  background: #fff;
+  position: relative;
+  bottom: 0;
+}
+.footer > div {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
+
+.footer {
+  background: #fff;
+  position: relative;
+  bottom: 0;
+}
+.footer > div {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
+h2{
+    text-align: center;
+    font-size: 35px;  
+}
+.main-gallery-wrap{ padding: 100px 0;}
+.m-g-box{max-width:1000px; margin: auto;}
+
+.main-gallery ul{overflow: hidden; }
+.main-gallery li{float:left; width: 31.33%; padding: 7px; }
+.main-gallery li:nth-child(3n+1){clear:both;}
+.main-gallery li > div{padding: 5px; border: 3px solid #e1e1e1; background: #fff;}
+.main-gallery li > div .thum{text-align: center;}
+.main-gallery li > div .thum img{ width: 100%;}
+.main-gallery li > div .info{text-align: center;}
+.main-gallery li > div .info h3{font-size: 30px;}
+.main_gallery ul li > div:hover{
+  border-color: #fb5849;
+}
+
+

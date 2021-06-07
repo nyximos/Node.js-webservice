@@ -20,6 +20,14 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
+router.get('/signup', isNotLoggedIn, (req, res) => {
+  res.render('signup', { title: '로그인 - NodeBird' });
+});
+
+router.get('/intro', isNotLoggedIn, (req, res) => {
+  res.render('introduction', { title: '조원소개 - NodeBird' });
+});
+
 router.get('/', async (req, res, next) => {
   try {
     const posts = await Post.findAll({

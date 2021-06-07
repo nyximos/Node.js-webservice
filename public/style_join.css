@@ -1,0 +1,25 @@
+body {
+    background-image: #34495e;
+  }
+ul{
+    list-style: none;
+}
+.input-group li{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+#join-form{
+    background-color: #ffffff;
+    border: solid 2px;
+    width: 50%;
+    margin: 0 auto;
+}
+.input-group{
+    padding: 3px;
+}   
