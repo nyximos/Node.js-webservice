@@ -1,0 +1,214 @@
+/* 초기화 */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+div {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: ;
+  font-size: 0.75em;
+  font-family: "Noto Sans KR";
+}
+h1 {
+  font-size: 17px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #ccc;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: gray; /*고정바 확인용 */
+  /* opacity: 0.9; */
+}
+
+.header .header-box {
+  overflow: hidden;
+  padding: 0px 10px;
+}
+.header h1 {
+  float: left;
+}
+
+.header h1 a {
+  display: block;
+  padding: 10;
+  color: #000;
+}
+.header h1 a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  background: #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.header .gnb {
+  width: 400px;
+  margin: 0 auto;
+}
+.header .gnb > ul {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.header .gnb > ul > li {
+  float: left;
+  margin: 0 10px;
+}
+.header .gnb > ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.header .gnb > ul > li > a:hover {
+  color: #6c5ce7;
+}
+.header .tnb {
+  float: right;
+  margin-top: 11px;
+}
+.header .tnb > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a {
+  display: inline;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
+}
+
+.footer {
+  background: #fff;
+}
+.footer > div {
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
+
+.center {
+  margin: auto;
+  width: 77%;
+  height: auto;
+  padding: 100px;
+  border: 1px solid gray;
+
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+/* .contents {
+  border: 1px solid #bcbcbc;
+  width: 77%;
+  height: 100%;
+  padding: 100px;
+  margin: 100px;
+  float: left;
+} */
+
+ .bg {
+  background-image: url("/Users/kiokio/Desktop/영상/sun.png");
+  height: 720px;
+  width: 100%;
+}
+
+.로그인if {
+  position: absolute;
+  top: 250px;
+  right: 100px;
+  text-align: right;
+
+  padding: 20px;
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
+  height: 100px;
+  width: 210px;
+}
+
+.로그인else {
+  position: absolute;
+  top: 250px;
+  right: 100px;
+  text-align: right;
+
+  padding: 20px;
+  background-color: #f7f9fa;
+  border: 1px solid #dae1e6;
+  height: 150px;
+  width: 210px;
+}
+
+.로그인버튼 {
+  cursor: pointer;
+  background-color: #19ce60;
+  border: #15c654;
+  color: #fff;
+  font-size: 100;
+  font-weight: 700;
+  height: 35px;
+  width: 200px;
+}
+
+.로그인버튼2 {
+  cursor: pointer;
+  background-color: #f6dd00;
+  border: #f6dd00;
+  color: #fff;
+  font-size: 100;
+  font-weight: 700;
+  height: 35px;
+  width: 200px;
+}
+
+.te {
+  height: 100px;
+  width: 50px;
+}
+
+.half { float: left; width: 50%; margin: 10px 0; }
+
+.user-name { font-weight: bold; font-size: 18px; }
+
