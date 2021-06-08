@@ -24,6 +24,10 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
+
+
+
+
 router.get('/', async (req, res, next) => {
   try {
     const posts = await Post.findAll({
