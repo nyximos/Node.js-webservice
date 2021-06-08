@@ -37,8 +37,8 @@
         <div>
             <ul class = "사이드메뉴">
                 <li class = "전공"><a href="">전공</a></li>
-                <li ><a href="/major/cp">&ensp;- 컴퓨터프로그래밍전공</a></li>
-                <li ><a href="/major/wd">&ensp;- 웹데이터베이스전공</a></li>
+                <li><a href="../">&ensp;- 컴퓨터프로그래밍전공</a></li>
+                <li id = '1' onclick = 'a(this.id)'> - 웹데이터베이스전공</li>
                 <li ><a href="/major/gc">&ensp;- 스마트게임컨텐츠전공</a></li>
             </ul>
         </div>
@@ -48,16 +48,16 @@
                 <div class = "글아래">웹2.0기반의 실무형 웹 솔루션 개발자 양성</div>
                 <div class = "글아래2">데이터베이스 관리자, 데이터베이스 응용프로그램 개발자 양성</div>
                 <div class = "글아래3">IoT기반 모바일 앱 개발자 양성</div>
-                <img src= "/image/2.png">
+                <img src= "/KakaoTalk_Photo_2021-06-09-00-54-35.png">
             </div>
         </a>
     </div>
 
     <div class = "영역1">
-        <div class = "영역1_제목">교육내용</div>
+        <div class = "영역1_제목"><p id="11">교육내용</p></div>
+        
         <div class = "영역1_부제목">데이터베이스 관리자와 개발자, 웹솔루션 개발자, 모바일 앱 개발자 양성을 목표로 IT직무의 기초에서부터 심화과정까지 실무능력을 배양할 수 있는 교육과정으로 편성</div>
     </div>
-
     <div class="footer">
         <div>
             <div class="f-logo">
@@ -68,6 +68,29 @@
             </div>
         </div>
     </div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function a(id){
+        axios({
+            method : 'post',
+            URL : 'http://localhost:8001/major',
+            data : {
+                "id" : id
+            }
+        })
+
+        .then((res)=>{
+            var id1 = id+1;
+            document.getElementById(id1).innerHTML="권혁태";
+        })
+
+        .catch((err)=>{
+            console.error(err);
+        })
+
+    }
+</script>
 
 </body>
 

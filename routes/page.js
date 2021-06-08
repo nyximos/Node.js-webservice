@@ -24,14 +24,9 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
-router.get('/major', isLoggedIn, (req, res) => {
+router.get('/major', (req, res) => {
   res.render('major', { title: '전공소개 - NodeBird' });
 });
-
-router.get('/major', isNotLoggedIn, (req, res) => {
-  res.render('major', { title: '전공소개 - NodeBird' });
-});
-
 
 
 router.get('/', async (req, res, next) => {
