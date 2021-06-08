@@ -36,8 +36,8 @@
             <div class = "큰제목">MY PAGE</div>
 
             <ul class = "내용">
-                <li class = "아이디">아이디</li>
-                <li class = "이름">이름</li>
+                <li class = "아이디">아이디 {{ user.email }}</li>
+                <li class = "이름">이름 {{ user.nick }}</li>
                 <li class = "비밀번호">비밀번호</li>
                 <li><button class = "비밀번호재설정"><a href="/login/find">비밀번호 재설정</a></button></li>
                 <li class = "문의">문의</li>
