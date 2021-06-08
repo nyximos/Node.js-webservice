@@ -109,76 +109,65 @@ a {
   color: #6c5ce7
 }
 
-.footer {
-  background: #fff;
-  position: relative;
-  bottom: 0;
-}
-.footer > div {
-  padding: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.footer > div > div {
-  float: left;
-}
-.footer > div > div.f-logo {
-  padding: 15px;
-  margin: 10px;
-}
-.footer > div > div.f-logo h1 a {
-  color: #000;
-}
-.footer > div > div.f-copy {
-  padding: 10px;
-  margin: 20px;
-  color: #000;
+
+.tnb{
+  font-size: 13px;
 }
 
-.footer {
-  background: #fff;
-  position: relative;
-  bottom: 0;
+.사이드{
+  background: orange;
+  position: fixed;
+  top: 60px; left: 10px; bottom: 0px;
+  width: 200px;
 }
-.footer > div {
-  padding: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
+.사이드 .사이드바 ul{
+  margin-top: 150px;
+  text-align: center;
+  background-color: #f1f1f1;
 }
-.footer > div > div {
+.사이드 .사이드바 li a{
+  font-size: 20px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+.사이드 .사이드바 .title{
+  font-size: 30px;
+  color: white;
+  background: #4caf50;
+}
+.사이드 .사이드바 li a:hover:not(.title){
+  background-color: #555;
+  color: white;
+}
+.공백{
+  background: blue;
+  position: fixed;
+  top: 60px; right: 0; bottom: 0;
+  width: 210px;
+}
+.내용공간{
+  background:tomato;
+  position: fixed;
+  left: 210px; right: 210px; top: 60px; bottom: 0;
+}
+.내용물 {
+  padding-top: 60px;
+  padding-left: 20px;
+}
+.내용물 img{
+  width: 350px;
+  height: 350px;
   float: left;
 }
-.footer > div > div.f-logo {
-  padding: 15px;
-  margin: 10px;
+.내용물 h2{
+  font-size: 40px;
+  text-align: center;
+  margin-top: -10px;
 }
-.footer > div > div.f-logo h1 a {
-  color: #000;
-}
-.footer > div > div.f-copy {
-  padding: 10px;
-  margin: 20px;
-  color: #000;
-}
-h2{
-    text-align: center;
-    font-size: 35px;  
-}
-.main-gallery-wrap{ padding: 100px 0;}
-.m-g-box{max-width:1000px; margin: auto;}
-
-.main-gallery ul{overflow: hidden; }
-.main-gallery li{float:left; width: 31.33%; padding: 7px; }
-.main-gallery li:nth-child(3n+1){clear:both;}
-.main-gallery li > div{padding: 5px; border: 3px solid #e1e1e1; background: #fff;}
-.main-gallery li > div .thum{text-align: center;}
-.main-gallery li > div .thum img{ width: 100%;}
-.main-gallery li > div .info{text-align: center;}
-.main-gallery li > div .info h3{font-size: 30px;}
-.main_gallery ul li > div:hover{
-  border-color: #fb5849;
+.소개글 li{
+ font-size: 30px;
+ ;
 }
 
 

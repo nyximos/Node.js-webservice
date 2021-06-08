@@ -24,6 +24,10 @@ router.get('/signup', isNotLoggedIn, (req, res) => {
   res.render('signup', { title: '로그인 - NodeBird' });
 });
 
+router.get('/intro', isLoggedIn, (req, res) => {
+  res.render('introduction', { title: '조원소개 - NodeBird' });
+});
+
 router.get('/intro', isNotLoggedIn, (req, res) => {
   res.render('introduction', { title: '조원소개 - NodeBird' });
 });
