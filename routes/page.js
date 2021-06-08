@@ -28,6 +28,10 @@ router.get('/major', isNotLoggedIn, (req, res) => {
   res.render('major', { title: '전공소개 - NodeBird' });
 });
 
+router.get('/major', isLoggedIn, (req, res) => {
+  res.render('major', { title: '전공소개 - NodeBird' });
+});
+
 router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
 });
