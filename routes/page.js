@@ -1,3 +1,4 @@
+const majors = require('../models/major'); // 데이터베이스 불러오는거 ㅋ
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const { Post, User, Hashtag } = require('../models');
@@ -28,6 +29,15 @@ router.get('/major', (req, res) => {
   res.render('major', { title: '전공소개 - NodeBird' });
 });
 
+router.post('/major', async(req,res)=> {
+
+  await majors.findOne({raw : true}) //있으면 셀렉트??
+  .then((result) =>{
+    var data = [result.majorName, result.subtitle1,result.subtitle2];
+    console.log(data);
+    res.send(data);
+  })
+})
 
 router.get('/', async (req, res, next) => {
   try {
