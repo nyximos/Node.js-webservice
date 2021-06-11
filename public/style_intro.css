@@ -115,7 +115,7 @@ a {
 }
 
 .사이드{
-  background: orange;
+ 
   position: fixed;
   top: 60px; left: 10px; bottom: 0px;
   width: 200px;
@@ -141,13 +141,13 @@ a {
   color: white;
 }
 .공백{
-  background: blue;
+  
   position: fixed;
   top: 60px; right: 0; bottom: 0;
   width: 210px;
 }
 .내용공간{
-  background:tomato;
+ 
   position: fixed;
   left: 210px; right: 210px; top: 60px; bottom: 0;
 }
