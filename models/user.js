@@ -29,7 +29,7 @@ module.exports = class User extends Sequelize.Model {
         allowNull: true,
       },
       birth: {
-        type: Sequelize.STRING(15),
+        type: Sequelize.STRING(15),  
         allowNull: true,
       },
       gender: {
@@ -55,7 +55,7 @@ module.exports = class User extends Sequelize.Model {
       underscored: false,   // true이면 created_at으로 자동 생성
       modelName: 'User',
       tableName: 'users',
-      paranoid: true,       // deletedAt 자동 생성
+      paranoid: false,       // deletedAt 자동 생성
       charset: 'utf8',
       collate: 'utf8_general_ci',
     });

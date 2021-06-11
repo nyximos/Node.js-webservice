@@ -1,6 +1,6 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { Post, User, Hashtag } = require('../models');
+const { Post, User, Hashtag, Major } = require('../models');
 
 const router = express.Router();
 
@@ -24,33 +24,40 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
-router.get('/major', isNotLoggedIn, (req, res) => {
-  res.render('major', { title: '전공소개 - NodeBird' });
-});
-
-router.get('/major', isLoggedIn, (req, res) => {
-  res.render('major', { title: '전공소개 - NodeBird' });
+router.get('/major', async (req, res) => {  // http:localhost:8001/major 를 들어갔을때
+  try {
+    const majors =  await Major.findOne({ // Major 테이블의 id 1인 데이터 로우들을 가져와서 majors에 저장
+      where: {
+        id: 1,
+      },
+    });
+    res.render('major', { majors });    // 테이블 값 majors를 major.html 들어갈때 미리 값을 넣어놈
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
 });
 
-router.get('/questions', isNotLoggedIn, (req, res) => {
+router.get('/questions', (req, res) => {
   res.render('questions', { title: '질의응답 - NodeBird' });
 });
 
-router.get('/questions/view', isNotLoggedIn, (req, res) => {
+router.get('/questions/view', (req, res) => {
   res.render('questions_view', { title: '질의응답_글보기 - NodeBird' });
 });
 
-router.get('/questions/write', isNotLoggedIn, (req, res) => {
+router.get('/questions/write', (req, res) => {
   res.render('questions_write', { title: '질의응답_글쓰기 - NodeBird' });
 });
 
-router.get('/questions/edit', isNotLoggedIn, (req, res) => {
+router.get('/questions/edit', (req, res) => {
   res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
 });
+
+
 
 router.get('/', async (req, res, next) => {
   try {
