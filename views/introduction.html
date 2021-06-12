@@ -48,48 +48,42 @@
     <div class="내용공간"> 
         <div class="내용물">
             <ul>
-                <li><a href=""><img src="/image/1.jpg" alt="사진1"></a></li>
-                <li><a href=""><img src="/image/2.jpg" alt="사진2"></a></li>
-                <li><a href=""><img src="/image/3.jpg" alt="사진3"></a></li>
-                <li><a href=""><img src="/image/4.jpg" alt="사진4"></a></li>
-                <li><a href=""><img src="/image/5.jpg" alt="사진5"></a></li>
-                <li><a href=""><img src="/image/6.jpg" alt="사진6"></a></li>
+                <li><a  onclick='a(this.id)' id="1"><img src="/image/1.jpg" alt="사진1"></a></li>
+                <li><a  onclick='a(this.id)' id="2"><img src="/image/2.jpg" alt="사진2"></a></li>
+                <li><a  onclick='a(this.id)' id="3"><img src="/image/3.jpg" alt="사진3"></a></li>
+                <li><a onclick='a(this.id)' id="4"><img src="/image/4.jpg" alt="사진4"></a></li>
+                <li><a  onclick='a(this.id)' id="5"><img src="/image/5.jpg" alt="사진5"></a></li>
+                <li><a  onclick='a(this.id)' id="6"><img src="/image/6.jpg" alt="사진6"></a></li>
             </ul>
         </div>
     </div>
     <div class="content">
-        <div>
-            <h2>이름</h2>
-            <p>생년월일</p>
-            <p>Email</p>
-            <p>역할</p>
-            <p>내용물</p>      
+        <d class="">                                
+            <h2 id="11">NAME</h2>        
+            <p id="12">BIRTH</p>
+            <p id="13">EMAIL</p>
+            <p id="14">TASK</p>
+            <p id="15">COMMENT</p> 
           </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        function a(id) {
-            axios({
-                method : 'post',
-                url : 'http://localhost:8001/intro',
-                data : {
-                    "id" : id
-                }
-            }).then( (res) => {
-                var id2 =id +1;
-                var id3 =id +2;
-                var id4 =id +3;
-                
+        async function a(id){
+            try{
+                const res = await axios.post('http://localhost:8001/intro',{
+                    id,
+                });
                 console.log(res);
-                document.getElementById(id2).innerHTML = res.data[0];
-                document.getElementById(id3).innerHTML = res.data[1];
-                document.getElementById(id4).innerHTML = res.data[2];
- 
-            })
-            .catch((err)=> {
+                document.getElementById(11).innerHTML = res.data[0];
+                document.getElementById(12).innerHTML = res.data[1];
+                document.getElementById(13).innerHTML = res.data[2];
+                document.getElementById(14).innerHTML = res.data[3];
+                document.getElementById(15).innerHTML = res.data[4];
+                document.getElementById(16).innerHTML = res.data[5];
+            }catch(err){
                 console.error(err);
-            })
-        }
+            }
+        };
     </script>
 </body>
 </html>

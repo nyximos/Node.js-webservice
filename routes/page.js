@@ -2,7 +2,7 @@ const majors = require('../models/major'); // 데이터베이스 불러오는거
 const intros = require('../models/intro');
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { Post, User, Hashtag } = require('../models');
+const { Post, User, Hashtag, Intro } = require('../models');
 
 const router = express.Router();
 
@@ -44,14 +44,26 @@ router.post('/major', async(req,res)=> {
 })
 
 router.post('/intro', async(req,res)=> {
-
-  await intros.findOne({raw : true}) 
-  .then((result) =>{
-    var data = [result.name, result.age,result.comment];
+  try{
+    const num =await req.body.id;
+    const intros = await Intro.findOne({
+      where:{
+        id:num,
+      }
+    });
+    const data = [
+      intros.name,
+      intros.birth,
+      intros.email,
+      intros.task,
+      intros.comment,
+    ];
     console.log(data);
     res.send(data);
-  })
-})
+  }catch(err){
+    console.error(err);
+  }
+});
 
 router.get('/', async (req, res, next) => {
   try {
