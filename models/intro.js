@@ -14,10 +14,18 @@ module.exports = class Intro extends Sequelize.Model {
          allowNull: false,  //not null
          unique : true,
      },
-     age:{
-         type:Sequelize.TINYINT.UNSIGNED, //나이가 255살 넘지 않기 때문에 TINYINT도 가능
-         allowNull: false,
-     },
+     birth: {
+      type: Sequelize.STRING(15),
+      allowNull: true,
+    },
+    email: {
+      type: Sequelize.STRING(40),
+      allowNull: false,
+    },
+    task:{
+      type: Sequelize.STRING(100),
+      allowNull: true,
+    },
      comment: {
          type:Sequelize.TEXT,
          allowNull: true,
