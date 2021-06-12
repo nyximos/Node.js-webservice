@@ -115,59 +115,48 @@ a {
 }
 
 .사이드{
- 
+
   position: fixed;
-  top: 60px; left: 10px; bottom: 0px;
-  width: 200px;
+  top: 60px; left: 00px; bottom: 0px;
+  width: 210px;
 }
-.사이드 .사이드바 ul{
-  margin-top: 150px;
-  text-align: center;
-  background-color: #f1f1f1;
+.사이드2{
+
+  position: fixed;
+  top: 60px; bottom: 00px; right: 0px;
+  width: 210px;
 }
-.사이드 .사이드바 li a{
-  font-size: 20px;
-  display: block;
-  color: #000;
-  text-decoration: none;
-}
-.사이드 .사이드바 .title{
-  font-size: 30px;
-  color: white;
-  background: #4caf50;
-}
-.사이드 .사이드바 li a:hover:not(.title){
-  background-color: #555;
-  color: white;
-}
+
 .공백{
-  
   position: fixed;
   top: 60px; right: 0; bottom: 0;
   width: 210px;
 }
 .내용공간{
- 
   position: fixed;
-  left: 210px; right: 210px; top: 60px; bottom: 0;
-}
-.내용물 {
-  padding-top: 60px;
-  padding-left: 20px;
+
+  top: 60px; left: 210px; right: 210px; bottom: 60%;
 }
 .내용물 img{
-  width: 350px;
-  height: 350px;
+  width: 170px;
+  height: 170px;
+  margin-top: 20px;
+  padding: 8px;
   float: left;
 }
-.내용물 h2{
-  font-size: 40px;
+
+.content{
+  top: 40% ; left: 210px; right: 210px; bottom: 0px;
+  position: fixed;
+ 
+}
+.content h2{
   text-align: center;
-  margin-top: -10px;
+  font-size: 45px;
 }
-.소개글 li{
- font-size: 30px;
- ;
+.content p{
+  font-size: 30px;
 }
+
 
 
