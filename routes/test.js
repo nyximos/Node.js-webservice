@@ -45,3 +45,24 @@ const { Major } = require('../models');
 //         console.error(error);
 //     }
 // })();
+
+router.post('/major', async(req, res) => {
+    try {
+      const majors = await Major.findOne({raw: true });
+      const data = [majors.majorName, majors.subtitle1, majors.subtitle2];
+      console.log(data);
+      res.send(data);
+    } catch (err) {
+      console.error(err);
+    }
+  });
+
+  // router.post('/major', async(req,res)=> {
+
+//   await majors.findOne({raw : true}) // 있으면 셀렉트??
+//   .then((result) =>{
+//     var data = [result.majorName, result.subtitle1,result.subtitle2];
+//     console.log(data);
+//     res.send(data);
+//   })
+// });

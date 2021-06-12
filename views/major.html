@@ -39,17 +39,17 @@
         <div>
             <ul class="사이드메뉴">
                 <li class="전공"><a href="">전공</a></li>
-                <li><a href="/major/cp">&ensp;- 컴퓨터프로그래밍전공</a></li>
-                <li><a href="/major/wd">&ensp;- 웹데이터베이스전공</a></li>
-                <li><a href="/major/gc">&ensp;- 스마트게임컨텐츠전공</a></li>
+                <li><a href="javascript:void(0)"></a><button  id = '1' onclick='a(this.id)'>&ensp;- 컴퓨터프로그래밍전공</button></a></li>
+                <li><a href="javascript:void(0)"></a><button  id = '2' onclick='a(this.id)'>&ensp;- 웹데이터베이스전공</a></li>
+                <li><a href="javascript:void(0)"></a><button  id = '3' onclick='a(this.id)'>&ensp;- 스마트게임컨텐츠전공</a></li>
             </ul>
         </div>
         <a href="javascript:void(0)">
             <div class="screen">
-                <div class="글위">{{ majors.majorName }}</div>
-                <div class="글아래">{{ majors.subtitle1 }}</div>
-                <div class="글아래2">{{ majors.subtitle2 }}</div>
-                <div class="글아래3">{{ majors.subtitle3 }}</div>
+                <div id='11' class="글위">바뀌기전</div>
+                <div id='12' class="글아래">바뀌기전</div>
+                <div id='13' class="글아래2">바뀌기전</div>
+                <div id='14' class="글아래3">바뀌기전</div>
                 <img src="/image/2.png">
             </div>
         </a>
@@ -57,7 +57,7 @@
 
     <div class="영역1">
         <div class="영역1_제목">교육내용</div>
-        <div class="영역1_부제목">{{majors.content}}</div>
+        <div id='15' class="영역1_부제목">바뀌기전</div>
     </div>
 
     <div class="footer">
@@ -71,32 +71,24 @@
         </div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- 밑 주석 script는 테스트용이라 삭제하셔도됩니다.
     <script>
-        (async () => {
+        async function a(id) {
             try {
-                const result = await axios.post('/major', {
-                    name : 'zerocho',
-                    birth: 1994,
+                const res = await axios.post('http://localhost:8001/major', {
+                    id,
                 });
-                console.log(result);
-                console.log(result.data);
-            } catch (error) {
-                console.error(error);
+                console.log(res); //받아오는 db값 확인용
+                document.getElementById(11).innerHTML = res.data[0];
+                document.getElementById(12).innerHTML = res.data[1];
+                document.getElementById(13).innerHTML = res.data[2];
+                document.getElementById(14).innerHTML = res.data[3];
+                document.getElementById(15).innerHTML = res.data[4];
             }
-        })();
+            catch (err) {
+                console.error(err);
+            }
+        };
     </script>
-    <script>
-        (async () => {
-            try {
-                const result = await axios.get('/major');
-                console.log(result);
-                console.log(result.data);
-            } catch (error) {
-                console.error(error);
-            }
-        })();
-    </script> -->
 </body>
 
 </html>

@@ -1,8 +1,10 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const { Post, User, Hashtag, Major } = require('../models');
+const { default: axios } = require('axios');
 
 const router = express.Router();
+
 
 router.use((req, res, next) => {
   res.locals.user = req.user;
@@ -24,14 +26,27 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
-router.get('/major', async (req, res) => {  // http:localhost:8001/major 를 들어갔을때
+router.get('/major', (req, res) => {
+  res.render('major', { title: '회원가입 - NodeBird' });
+});
+
+router.post('/major', async(req, res) => {
   try {
-    const majors =  await Major.findOne({ // Major 테이블의 id 1인 데이터 로우들을 가져와서 majors에 저장
+    const num = await req.body.id;
+    const majors = await Major.findOne({
       where: {
-        id: 1,
-      },
-    });
-    res.render('major', { majors });    // 테이블 값 majors를 major.html 들어갈때 미리 값을 넣어놈
+      id: num,
+      }
+     });
+    const data = [
+      majors.majorName, 
+      majors.subtitle1, 
+      majors.subtitle2, 
+      majors.subtitle3, 
+      majors.content
+    ];
+    console.log(data);
+    res.send(data);
   } catch (err) {
     console.error(err);
   }
