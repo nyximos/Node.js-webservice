@@ -47,30 +47,50 @@
         <div class="사이드바">
             <ul>
                 <li class="title">조원</li>
-                <li><a href="#">111</a></li>
-                <li><a href="#">111</a></li>
-                <li><a href="#">111</a></li>
-                <li><a href="#">111</a></li>
-                <li><a href="#">111</a></li>
-                <li><a href="#">111</a></li>
+                <li><a onclick='a(this.id)' id='1'>사람 1</a></li>
+                <li><a onclick='a(this.id)' id='2'>사람 2</a></li>
+                <li><a href="#">사람 3</a></li>
+                <li><a href="#">사람 4</a></li>
+                <li><a href="#">사람 5</a></li>
+                <li><a href="#">사람 6</a></li>
             </ul>
         </div>
     </div>
     <div class="내용공간">
         <div class="내용물">
             <img src="/image/1.jpg" alt="사진1">
-            <h2>111</h2>
+            <h2 id="11">111</h2>    
         </div>
         <div class="소개글">
             <ul>
-                <li></li>
-                <li>나이</li>
-                <li>나이</li>
-                <li>나이</li>
+                <li><p id="12"></p></li>
+                <li><p id="13"></p></li>
             </ul>
         </div>
     </div>
-   <script src="/sequelize.js"></script>
-   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        function a(id) {
+            axios({
+                method : 'post',
+                url : 'http://localhost:8001/intro',
+                data : {
+                    "id" : id
+                }
+            }).then( (res) => {
+                var id2 =id +1;
+                var id3 =id +2;
+                var id4 =id +3;
+                
+                document.getElementById(id2).innerHTML = res.data[0];
+                document.getElementById(id3).innerHTML = res.data[1];
+                document.getElementById(id4).innerHTML = res.data[2];
+ 
+            })
+            .catch((err)=> {
+                console.error(err);
+            })
+        }
+    </script>
 </body>
 </html>
