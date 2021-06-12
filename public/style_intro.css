@@ -155,10 +155,13 @@ a {
   position: fixed;
  
 }
-.content h2{
-  text-align: center;
-  font-size: 45px;
+.content .내용물1 span{
+  font-size: 50px;
 }
-.content p{
-  font-size: 30px;
+.content .내용물2 span{
+  font-size: 37px;
 }
+
+
+
+
