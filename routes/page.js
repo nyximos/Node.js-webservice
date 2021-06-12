@@ -47,7 +47,6 @@ router.post('/major', async(req, res) => {
       majors.subtitle3, 
       majors.content
     ];
-    console.log(req);
     console.log(data);
     res.send(data);
   } catch (err) {
