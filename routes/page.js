@@ -47,6 +47,7 @@ router.post('/major', async(req, res) => {
       majors.subtitle3, 
       majors.content
     ];
+    console.log(req);
     console.log(data);
     res.send(data);
   } catch (err) {
@@ -57,16 +58,6 @@ router.post('/major', async(req, res) => {
 router.get('/intro', (req, res) => {
   res.render('introduction', { title: '조원 소개 - NodeBird' });
 });
-
-router.post('/major', async(req,res)=> {
-
-  await majors.findOne({raw : true}) // 있으면 셀렉트??
-  .then((result) =>{
-    var data = [result.majorName, result.subtitle1,result.subtitle2, result.content];
-    console.log(data);
-    res.send(data);
-  })
-})
 
 router.post('/intro', async(req,res)=> {
   try{
