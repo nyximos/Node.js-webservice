@@ -1,0 +1,164 @@
+/* 초기화 */
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+dd {
+  margin-inline-start: 0;
+}
+html {
+  font-size: 10px;
+}
+div {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.75em;
+  font-family: "Noto Sans KR";
+}
+h1 {
+  font-size: 17px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #ccc;
+}
+
+.header.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background: ccc; /*고정바 확인용 */
+}
+
+.header .header-box {
+  overflow: hidden;
+  padding: 0px 10px;
+}
+.header h1 {
+  float: left;
+}
+
+.header h1 a {
+  display: block;
+  padding: 10;
+  color: #000;
+}
+.header h1 a span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0;
+  background: #ccc;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+}
+.header .gnb {
+  width: 400px;
+  margin: 0 auto;
+}
+.header .gnb > ul {
+  width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.header .gnb > ul > li {
+  float: left;
+  margin: 0 10px;
+}
+.header .gnb > ul > li > a {
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+.header .gnb > ul > li > a:hover {
+  color: #6c5ce7;
+}
+.header .tnb {
+  float: right;
+  margin-top: 11px;
+}
+.header .tnb > ul > li {
+  float: left;
+  display: block;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a {
+  display: inline;
+  padding: 10px;
+  color: #000;
+}
+.header .tnb > ul > li > a:hover {
+  color: #6c5ce7
+}
+
+
+.tnb{
+  font-size: 13px;
+}
+
+.사이드{
+
+  position: fixed;
+  top: 60px; left: 00px; bottom: 0px;
+  width: 210px;
+}
+.사이드2{
+
+  position: fixed;
+  top: 60px; bottom: 00px; right: 0px;
+  width: 210px;
+}
+
+.공백{
+  position: fixed;
+  top: 60px; right: 0; bottom: 0;
+  width: 210px;
+}
+.내용공간{
+  position: fixed;
+
+  top: 60px; left: 210px; right: 210px; bottom: 60%;
+}
+.내용물 img{
+  width: 160px;
+  height: 160px;
+  margin-top: 20px;
+  padding: 8px;
+  float: left;
+  border:solid 1px;
+}
+.내용물 img:hover{
+  cursor: pointer;
+  color: #ccc;
+}
+
+.content{
+  top: 40% ; left: 210px; right: 210px; bottom: 0px;
+  position: fixed;
+ 
+}
+.content h2{
+  text-align: center;
+  font-size: 45px;
+}
+.content p{
+  font-size: 30px;
+}

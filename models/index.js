@@ -4,7 +4,9 @@ const config = require('../config/config')[env];
 const User = require('./user');
 const Post = require('./post');
 const Hashtag = require('./hashtag');
+const Intro = require('./intro');
 const Major = require('./major');
+
 
 const db = {};
 const sequelize = new Sequelize(
@@ -15,16 +17,20 @@ db.sequelize = sequelize;
 db.User = User;
 db.Post = Post;
 db.Hashtag = Hashtag;
+db.Intro = Intro;
 db.Major = Major;
+
 
 User.init(sequelize);
 Post.init(sequelize);
 Hashtag.init(sequelize);
+Intro.init(sequelize); // table이랑 model 이랑 sequelize 랑 mysql연결
 Major.init(sequelize);
 
 User.associate(db);
 Post.associate(db);
 Hashtag.associate(db);
+Intro.associate(db);
 Major.associate(db);
 
 module.exports = db;

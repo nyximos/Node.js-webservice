@@ -6,8 +6,10 @@ const User = require('../models/user');
 
 const router = express.Router();
 
+// POST /auth/join 요청
 router.post('/join', isNotLoggedIn, async (req, res, next) => {
   const { email, nick, password, number, birth, gender, mobile } = req.body;
+  //
   try {
     const exUser = await User.findOne({ where: { email } });
     if (exUser) {
@@ -55,8 +57,11 @@ router.get('/logout', isLoggedIn, (req, res) => {
   res.redirect('/');
 });
 
+
+// GET /auth/kakao 요청
 router.get('/kakao', passport.authenticate('kakao'));
 
+// GET/auth/kakao/callback 요청
 router.get('/kakao/callback', passport.authenticate('kakao', {
   failureRedirect: '/',
 }), (req, res) => {

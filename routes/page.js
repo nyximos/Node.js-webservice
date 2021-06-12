@@ -1,6 +1,8 @@
+const majors = require('../models/major'); // 데이터베이스 불러오는거 ㅋ
+const intros = require('../models/intro');
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { Post, User, Hashtag, Major } = require('../models');
+const { Post, User, Hashtag, Major, Intro } = require('../models');
 const { default: axios } = require('axios');
 
 const router = express.Router();
@@ -52,6 +54,42 @@ router.post('/major', async(req, res) => {
   }
 });
 
+router.get('/intro', (req, res) => {
+  res.render('introduction', { title: '조원 소개 - NodeBird' });
+});
+
+router.post('/major', async(req,res)=> {
+
+  await majors.findOne({raw : true}) // 있으면 셀렉트??
+  .then((result) =>{
+    var data = [result.majorName, result.subtitle1,result.subtitle2, result.content];
+    console.log(data);
+    res.send(data);
+  })
+})
+
+router.post('/intro', async(req,res)=> {
+  try{
+    const num =await req.body.id;
+    const intros = await Intro.findOne({
+      where:{
+        id:num,
+      }
+    });
+    const data = [
+      intros.name,
+      intros.birth,
+      intros.email,
+      intros.task,
+      intros.comment,
+    ];
+    console.log(data);
+    res.send(data);
+  }catch(err){
+    console.error(err);
+  }
+});
+
 router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
 });
@@ -71,8 +109,6 @@ router.get('/questions/write', (req, res) => {
 router.get('/questions/edit', (req, res) => {
   res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
 });
-
-
 
 router.get('/', async (req, res, next) => {
   try {

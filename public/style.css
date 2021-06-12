@@ -168,6 +168,7 @@ a {
   width: 210px;
 }
 
+
 .로그인else {
   position: absolute;
   top: 250px;
@@ -180,6 +181,7 @@ a {
   height: 150px;
   width: 210px;
 }
+
 
 .로그인버튼 {
   cursor: pointer;
@@ -211,4 +213,3 @@ a {
 .half { float: left; width: 50%; margin: 10px 0; }
 
 .user-name { font-weight: bold; font-size: 18px; }
-
