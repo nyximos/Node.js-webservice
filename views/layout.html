@@ -42,12 +42,11 @@
     </div>
   </div>
   <div class="contents">
-
+    <img src="/image/node.png">
   </div>
 
 
-  <div class="bg">
-    <br><br><br><br><br><br>
+  <div>
     {% if user and user.id %}
     <!-- 로그인 했을때 보여줘야하는 화면들 여기 작성 -->
     <div class="로그인if">
@@ -71,9 +70,9 @@
       <div class="로그인else">
         <div class="로그인폼">
           <ul>
-            <li>이메일&nbsp;&nbsp;&nbsp;<input id="email" type="email" name="email" required autofocus></li>
+            <li>이메일&nbsp;&nbsp;&nbsp;<input id="email" type="email" name="email" class="num" required autofocus></li>
 
-            <li style="line-height : 30px">비밀번호&nbsp;&nbsp;<input id="password" type="password" name="password"
+            <li style="line-height : 30px">비밀번호&nbsp;&nbsp;<input id="password" type="password" name="password" class="num"
                 required></li>
 
             <li style="line-height : 50px"><button id="login" type="submit" value="TeamName로그인" value
@@ -81,8 +80,6 @@
 
             <li><button type="input" button class="로그인버튼2" onclick="location.href='/auth/kakao'">카카오톡
                 로그인</button></li>
-
-            <li><a href="/join">회원가입</a></li>
           </ul>
         </div>
       </div>
@@ -90,16 +87,6 @@
     {% endif %}
   </div>
 
-  <div class="footer">
-    <div>
-      <div class="f-logo">
-        <h1><a href="./index.html"><span>GotPost</span></a></h1>
-      </div>
-      <div class="f-copy">
-        <p>copyright(c) TeamName. All Rights Reserved</p>
-      </div>
-    </div>
-  </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     window.onload = () => {

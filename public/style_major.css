@@ -42,7 +42,7 @@ a {
   width: 100%;
   top: 0px;
   z-index: 9999;
-  background: #ccc; /*고정바 확인용 */
+  background: rgb(255, 255, 255); /*고정바 확인용 */
 }
 
 .header .header-box {
@@ -62,7 +62,7 @@ a {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0;
-  background: #ccc;
+  background: rgb(255, 255, 255);
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
