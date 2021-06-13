@@ -33,6 +33,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
   }
 });
 
+
 // POST /auth/join 요청
 router.post('/questions/write', isLoggedIn, async (req, res, next) => {
   const { title, content } = req.body;
@@ -50,6 +51,7 @@ router.post('/questions/write', isLoggedIn, async (req, res, next) => {
     return next(error);
   }
 });
+
 
 router.post('/login', isNotLoggedIn, (req, res, next) => {
   passport.authenticate('local', (authError, user, info) => {

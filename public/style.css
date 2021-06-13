@@ -106,6 +106,8 @@ a {
 .header .tnb > ul > li > a {
   display: inline;
   padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
   color: #000;
 }
 .header .tnb > ul > li > a:hover {

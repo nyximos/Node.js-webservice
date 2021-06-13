@@ -43,17 +43,5 @@ module.exports = class Question extends Sequelize.Model {
     });
   }
 
-  static associate(db) {
-    // db.User.hasMany(db.Post);     // 사용자는 게시글을 다수 가질 수 있다.
-    // db.User.belongsToMany(db.User, {    // 사용자는 여러 사용자에게 팔로잉될 수 있다.
-    //   foreignKey: 'followingId',              // FollowingId가 외래키
-    //   as: 'Followers',                           // Followers 형태로서 
-    //   through: 'Follow',                       // Follow 모델이 중간 매개 모델
-    // });
-    // db.User.belongsToMany(db.User, {    // 사용자는 여러 사용자에게 팔로워로서 역할할 수 있다.
-    //   foreignKey: 'followerId',
-    //   as: 'Followings',
-    //   through: 'Follow',
-    // });
-  }
+  static associate(db) {}
 };
