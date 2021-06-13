@@ -3,6 +3,7 @@ const passport = require('passport');
 const bcrypt = require('bcrypt');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const User = require('../models/user');
+const Question = require('../models/questions');
 
 const router = express.Router();
 
@@ -26,6 +27,23 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
       mobile
     });
     return res.redirect('/');
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+});
+
+// POST 고객센터 요청
+router.post('/questions/write', isLoggedIn, async (req, res, next) => {
+  const { title, content } = req.body;
+  //
+  try {
+    await Question.create({
+      title,
+      content
+      
+    });
+    return res.redirect('/questions');
   } catch (error) {
     console.error(error);
     return next(error);

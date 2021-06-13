@@ -2,7 +2,7 @@ const majors = require('../models/major'); // 데이터베이스 불러오는거
 const intros = require('../models/intro');
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const { Post, User, Hashtag, Major, Intro } = require('../models');
+const { Post, User, Hashtag, Major, Intro, Question } = require('../models');
 const { default: axios } = require('axios');
 
 const router = express.Router();
@@ -84,7 +84,7 @@ router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
 });
 
-router.get('/questions', (req, res) => {
+router.get('/questions',  (req, res) => {
   res.render('questions', { title: '질의응답 - NodeBird' });
 });
 
