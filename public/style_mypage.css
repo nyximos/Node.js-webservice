@@ -6,10 +6,16 @@
 :before {
   box-sizing: inherit;
 }
+html {
+  height: 1500px;
+}
+
 div {
   display: block;
 }
 body {
+  position: relative;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-size: 0.75em;
@@ -105,15 +111,16 @@ a {
 
 .footer {
   background: #fff;
-  width: 100%;
-  bottom: 0%;
+  bottom: 0;
+  position:absolute;
   
 }
 .footer > div {
-  bottom: 0%;
-  padding: 10px;
+  padding-left: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+  height: 80px;
   
 }
 .footer > div > div {
@@ -135,7 +142,7 @@ a {
   
   position: relative;
   width: 79.1%;
-  height: 1200px;
+  height: 90%;
   padding: 0 180px;
   float: left;
 }
@@ -392,3 +399,14 @@ a {
   
 }
 
+.내용 > li {
+  margin-top: 15px;
+}
+
+.내용 > li {
+  font-size: 22px;
+}
+
+.내용 > li > span.detail {
+  margin-left: 20px;
+}

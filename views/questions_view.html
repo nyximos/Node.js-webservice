@@ -12,20 +12,27 @@
             <div class="header-box">
                 <h1>
                     <a href="/">
-                    <span>TeamName</span>
+                        <span>TeamName</span>
                     </a>
                     <!-- <img src="로고이미지 위치" alt> -->
-                </h1>
+                </h1>         
                 <div class="tnb">
+                    {% if user and user.id %}
+                        <ul>
+                            <li>{{ user.nick + '님'}}</li>
+                            <li><a href="/mypage">마이페이지</a></li>
+                        </ul>
+                    {% else %}
                     <ul>
-                        <li><a href="/login">로그인</a></li>
-                        <li><a href="/login/check">회원가입</a></li>
+                        <li><a href="./login.html">로그인</a></li>
+                        <li><a href="/join">회원가입</a></li>
                         <!-- 
-                        <li>로그아웃</li>
-                        <li>정보수정</li>
-                        -->
+                            <li>로그아웃</li>
+                            <li>정보수정</li>
+                            -->
                     </ul>
-                </div>
+                    {% endif %}
+                </div>        
                 <div class="gnb">
                     <ul>
                         <li><a href="/intro">조원소개</a></li>

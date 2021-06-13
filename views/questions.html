@@ -4,28 +4,32 @@
             <meta charset="UTF-8">
             <link rel="stylesheet" href="/style_questions.css">
     </head>
-    
-
-    
     <body>
         <div class="header  fixed" style="inset: 0px auto auto 0px;">
             <div class="header-box">
                 <h1>
                     <a href="/">
-                    <span>TeamName</span>
+                        <span>TeamName</span>
                     </a>
                     <!-- <img src="로고이미지 위치" alt> -->
-                </h1>
+                </h1>         
                 <div class="tnb">
+                    {% if user and user.id %}
+                        <ul>
+                            <li>{{ user.nick + '님'}}</li>
+                            <li><a href="/mypage">마이페이지</a></li>
+                        </ul>
+                    {% else %}
                     <ul>
-                        <li><a href="/login">로그인</a></li>
-                        <li><a href="/login/check">회원가입</a></li>
+                        <li><a href="./login.html">로그인</a></li>
+                        <li><a href="/join">회원가입</a></li>
                         <!-- 
-                        <li>로그아웃</li>
-                        <li>정보수정</li>
-                        -->
+                            <li>로그아웃</li>
+                            <li>정보수정</li>
+                            -->
                     </ul>
-                </div>
+                    {% endif %}
+                </div>        
                 <div class="gnb">
                     <ul>
                         <li><a href="/intro">조원소개</a></li>
@@ -48,6 +52,7 @@
                             <div class="title">제목</div>
                             <div class="writer">글쓴이</div>
                             <div class="date">작성일</div>
+                            <div class="count">조회</div>
                             
                         </div>
                         <div>
@@ -55,35 +60,35 @@
                             <div class="title"><a href="/questions/view">글 제목이 들어갑니다.</a></div>
                             <div class="writer">김이름</div>
                             <div class="date">2021.05.30</div>
-                            
+                            <div class="count">36</div>
                         </div>
                         <div>
                             <div class="num">4</div>
                             <div class="title"><a href="/questions/view">글 제목이 들어갑니다.</a></div>
                             <div class="writer">김이름</div>
                             <div class="date">2021.05.30</div>
-                            
+                            <div class="count">36</div>
                         </div>
                         <div>
                             <div class="num">3</div>
                             <div class="title"><a href="/questions/view">글 제목이 들어갑니다.</a></div>
                             <div class="writer">김이름</div>
                             <div class="date">2021.05.30</div>
-                            
+                            <div class="count">36</div>
                         </div>
                         <div>
                             <div class="num">2</div>
                             <div class="title"><a href="/questions/view">글 제목이 들어갑니다.</a></div>
                             <div class="writer">김이름</div>
                             <div class="date">2021.05.30</div>
-                            
+                            <div class="count">36</div>
                         </div>
                         <div>
                             <div class="num">1</div>
                             <div class="title"><a href="/questions/view">글 제목이 들어갑니다.</a></div>
                             <div class="writer">김이름</div>
                             <div class="date">2021.05.30</div>
-                            
+                            <div class="count">36</div>
                         </div>
                     </div>
                     <div class="board_page">
@@ -104,11 +109,12 @@
                 </div>
             </div>
         
+        
+        </div>
         <div class="footer">
             <div>
                 <div class="f-logo"><h1><a href="/"><span>TeamName</span></a></h1></div>
                 <div class="f-copy"><p>copyright(c) TeamName. All Rights Reserved</p></div>
             </div>
-        </div>
     </body>
 </html>

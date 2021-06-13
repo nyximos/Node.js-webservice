@@ -9,20 +9,27 @@
             <div class="header-box">
                 <h1>
                     <a href="/">
-                    <span>TeamName</span>
+                        <span>TeamName</span>
                     </a>
                     <!-- <img src="로고이미지 위치" alt> -->
-                </h1>
+                </h1>         
                 <div class="tnb">
+                    {% if user and user.id %}
+                        <ul>
+                            <li>{{ user.nick + '님'}}</li>
+                            <li><a href="/mypage">마이페이지</a></li>
+                        </ul>
+                    {% else %}
                     <ul>
-                        <li><a href="/login">로그인</a></li>
-                        <li><a href="/login/check">회원가입</a></li>
+                        <li><a href="./login.html">로그인</a></li>
+                        <li><a href="/join">회원가입</a></li>
                         <!-- 
-                        <li>로그아웃</li>
-                        <li>정보수정</li>
-                        -->
+                            <li>로그아웃</li>
+                            <li>정보수정</li>
+                            -->
                     </ul>
-                </div>
+                    {% endif %}
+                </div>        
                 <div class="gnb">
                     <ul>
                         <li><a href="/intro">조원소개</a></li>
@@ -34,16 +41,15 @@
         </div>
         <div class="contents">
             <div class = "큰제목">MY PAGE</div>
-
             <ul class = "내용">
-                <li class = "아이디">아이디 {{ user.email }}</li>
-                <li class = "이름">이름 {{ user.nick }}</li>
+                <li class = "아이디"><span>이메일</span><span class ="detail">{{ user.email }}</span></li>
+                <li class = "이름"><span>이름</span><span class ="detail">{{ user.nick }}</span></li>
                 <li class = "비밀번호">비밀번호</li>
-                <li><button class = "비밀번호재설정"><a href="/login/find">비밀번호 재설정</a></button></li>
+                <li><button class = "비밀번호재설정">비밀번호 재설정</button></li>
                 <li class = "문의">문의</li>
                 <li><button class = "문의"><a href="/questions">Go</a></button></li>
                 <li class = "탈퇴">탈퇴</li>
-                <li><textarea rows="30" cols= "100" class = "유의사항">유의사항</textarea></li>
+                <li><textarea rows="30" cols= "100" class = "유의사항">탈퇴 유의사항 적는 곳입니다.</textarea></li>
                 <li><button class = "탈퇴">탈퇴</button></li>
             </ul>
         </div>

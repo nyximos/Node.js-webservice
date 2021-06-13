@@ -33,7 +33,7 @@ module.exports = class User extends Sequelize.Model {
         allowNull: true,
       },
       gender: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING(15),
         allowNull: true,
       },
       mobile: {  // 전화번호

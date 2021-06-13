@@ -11,6 +11,7 @@ dd {
 }
 html {
   font-size: 10px;
+  height: 100%;
 }
 div {
   display: block;
@@ -111,14 +112,15 @@ a {
 
 .footer {
   background: #fff;
-  position: relative;
+  position: absolute;
   bottom: 0;
 }
 .footer > div {
-  padding: 10px;
+  padding-left: 20px;
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
+  height: 80px;
 }
 .footer > div > div {
   float: left;
@@ -139,14 +141,13 @@ a {
 .contents {
   position: relative;
   top: 100px;
-  height: 100vh;
   width: 80vw;
   left: 180px;
 }
 /*게시판 만들기 */
 
 .board_wrap {
-  width: 900px; /* 가로 1000px 줌 */
+  width: 1000px; /* 가로 1000px 줌 */
   margin: 100px auto; /* auto는 가운데정렬 */
 }
 
@@ -414,4 +415,17 @@ a {
   box-sizing: border-box;
   border: 0;
   resize: vertical; /* 사이즈변경은 위아래만 가능하게 */
+}
+
+.btn {
+  display: inline-block;
+  min-width: 80px;
+  padding: 10px 11px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  margin-left: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  font-family: "Noto Sans KR"
 }
