@@ -9,6 +9,7 @@
 
 html {
   height: 1500px;
+  width: 100%;
 }
 div {
   display: block;
@@ -20,6 +21,7 @@ body {
   padding: 0;
   font-size: 0.75em;
   font-family: "Noto Sans KR";
+  width: 100%;
 }
 h1 {
   font-size: 17px;
@@ -34,20 +36,21 @@ a {
 }
 
 .header {
-  background: #ccc;
+  background: rgb(255, 255, 255);
 }
 
 .header.fixed {
   position: fixed;
   width: 100%;
-  top: 0px;
   z-index: 9999;
-  background: rgb(255, 255, 255); /*고정바 확인용 */
+  background: ccc; /*고정바 확인용 */
 }
 
 .header .header-box {
   overflow: hidden;
   padding: 0px 10px;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.473);
 }
 .header h1 {
   float: left;
@@ -94,6 +97,9 @@ a {
 .header .tnb {
   float: right;
   margin-top: 11px;
+  font-size: 16px;
+  font-weight: 500;
+
 }
 .header .tnb > ul > li {
   float: left;

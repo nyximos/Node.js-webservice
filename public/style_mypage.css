@@ -34,19 +34,21 @@ a {
 }
 
 .header {
-  background: #ccc;
+  background: rgb(255, 255, 255);
 }
 
 .header.fixed {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: #ccc; /*고정바 확인용 */
+  background: ccc; /*고정바 확인용 */
 }
 
 .header .header-box {
   overflow: hidden;
   padding: 0px 10px;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.473);
 }
 .header h1 {
   float: left;
@@ -61,7 +63,7 @@ a {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0;
-  background: #ccc;
+  background: rgb(255, 255, 255);
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
@@ -93,6 +95,9 @@ a {
 .header .tnb {
   float: right;
   margin-top: 11px;
+  font-size: 16px;
+  font-weight: 500;
+
 }
 .header .tnb > ul > li {
   float: left;

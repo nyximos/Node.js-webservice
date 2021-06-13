@@ -32,6 +32,31 @@ router.get('/major', (req, res) => {
   res.render('major', { title: '회원가입 - NodeBird' });
 });
 
+router.get('/intro', (req, res) => {
+  res.render('introduction', { title: '조원 소개 - NodeBird' });
+});
+
+router.get('/mypage', isNotLoggedIn, (req, res) => {
+  res.render('mypage', { title: '마이페이지 - NodeBird' });
+});
+
+router.get('/questions', (req, res) => {
+  res.render('questions', { title: '질의응답 - NodeBird' });
+});
+
+
+router.get('/questions/view', (req, res) => {
+  res.render('questions_view', { title: '질의응답_글보기 - NodeBird' });
+});
+
+router.get('/questions/write', (req, res) => {
+  res.render('questions_write', { title: '질의응답_글쓰기 - NodeBird' });
+});
+
+router.get('/questions/edit', (req, res) => {
+  res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
+});
+
 router.post('/major', async(req, res) => {
   try {
     const num = await req.body.id;
@@ -54,9 +79,7 @@ router.post('/major', async(req, res) => {
   }
 });
 
-router.get('/intro', (req, res) => {
-  res.render('introduction', { title: '조원 소개 - NodeBird' });
-});
+
 
 router.post('/intro', async(req,res)=> {
   try{
@@ -80,39 +103,7 @@ router.post('/intro', async(req,res)=> {
   }
 });
 
-router.get('/mypage', isNotLoggedIn, (req, res) => {
-  res.render('mypage', { title: '마이페이지 - NodeBird' });
-});
 
-router.get('/questions', (req, res) => {
-  res.render('questions', { title: '질의응답 - NodeBird' });
-});
-
-router.get('/questions', async (req, res, next) => {
-  try {
-    const abc = await Question.findOne({});
-    console.log(abc);
-    console.log(abc.title);
-    res.render('questions', { abc });
-  } catch (err) {
-    console.err(err);
-    next(err);
-  }
-});
-
-
-
-router.get('/questions/view', (req, res) => {
-  res.render('questions_view', { title: '질의응답_글보기 - NodeBird' });
-});
-
-router.get('/questions/write', (req, res) => {
-  res.render('questions_write', { title: '질의응답_글쓰기 - NodeBird' });
-});
-
-router.get('/questions/edit', (req, res) => {
-  res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
-});
 
 router.get('/', async (req, res, next) => {
   try {

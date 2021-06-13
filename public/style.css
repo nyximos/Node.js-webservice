@@ -32,20 +32,21 @@ a {
 }
 
 .header {
-  background: #ccc;
+  background: rgb(255, 255, 255);
 }
 
 .header.fixed {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  background: rgb(255, 255, 255); /*고정바 확인용 */
-  /* opacity: 0.9; */
+  background: ccc; /*고정바 확인용 */
 }
 
 .header .header-box {
   overflow: hidden;
   padding: 0px 10px;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.473);
 }
 .header h1 {
   float: left;
@@ -92,6 +93,9 @@ a {
 .header .tnb {
   float: right;
   margin-top: 11px;
+  font-size: 16px;
+  font-weight: 500;
+
 }
 .header .tnb > ul > li {
   float: left;
@@ -161,10 +165,7 @@ a {
   top: 250px;
   right: 100px;
   text-align: right;
-
   padding: 20px;
-  background-color: #f7f9fa;
-  border: 1px solid #dae1e6;
   height: 100px;
   width: 210px;
 }
@@ -227,6 +228,25 @@ input.num:focus {
   width: 50px;
 }
 
-.half { float: left; width: 50%; margin: 10px 0; }
+.half { 
+  float: left;
+  width: 50%;
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 6px black;
+}
 
-.user-name { font-weight: bold; font-size: 18px; }
+.user-name { 
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 8px black;
+}
+
+.로그인폼 > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 1px 1px 8px black;
+}
