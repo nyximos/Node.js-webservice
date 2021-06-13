@@ -3,6 +3,7 @@ const passport = require('passport');
 const bcrypt = require('bcrypt');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const User = require('../models/user');
+const Question = require('../models/questions');
 
 const router = express.Router();
 
@@ -31,6 +32,34 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
     return next(error);
   }
 });
+
+
+router.get('/questions/write', isLoggedIn, async (req, res, next)=> {
+  try{
+    const questions = await Question.findAll();
+    res.send(users);
+  } catch(err){
+    console.error(err);
+    next(err)
+  }
+})
+
+// POST /auth/join 요청
+router.post('/questions/write', isLoggedIn, async (req, res, next) => {
+  const { title, content } = req.body;
+  //
+  try {
+    await Question.create({
+      title,
+      content
+    });
+    return res.redirect('/questions');
+  } catch (error) {
+    console.error(error);
+    return next(error);
+  }
+});
+
 
 router.post('/login', isNotLoggedIn, (req, res, next) => {
   passport.authenticate('local', (authError, user, info) => {

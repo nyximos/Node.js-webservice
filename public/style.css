@@ -98,6 +98,8 @@ a {
 .header .tnb > ul > li > a {
   display: inline;
   padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
   color: #000;
 }
 .header .tnb > ul > li > a:hover {
@@ -179,7 +181,7 @@ a {
   background-color: #f7f9fa;
   border: 1px solid #dae1e6;
   height: 150px;
-  width: 210px;
+
 }
 
 
