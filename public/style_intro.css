@@ -40,7 +40,7 @@ a {
 }
 
 .header {
-  background: #ccc;
+  background: rgb(255, 255, 255);
 }
 
 .header.fixed {
@@ -53,6 +53,8 @@ a {
 .header .header-box {
   overflow: hidden;
   padding: 0px 10px;
+  border-bottom: 1px solid black;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.473);
 }
 .header h1 {
   float: left;
@@ -67,7 +69,7 @@ a {
   display: inline-block;
   vertical-align: middle;
   margin-left: 0;
-  background: #ccc;
+  background: rgb(255, 255, 255);
   height: 40px;
   line-height: 40px;
   padding: 0 10px;
@@ -99,6 +101,9 @@ a {
 .header .tnb {
   float: right;
   margin-top: 11px;
+  font-size: 16px;
+  font-weight: 500;
+
 }
 .header .tnb > ul > li {
   float: left;
@@ -110,11 +115,6 @@ a {
   display: inline;
   padding: 10px;
   color: #000;
-  font-size: 16px;
-  font-weight: 500;
-}
-.header .tnb > ul >li{
-  font-size: 16px;
 }
 .header .tnb > ul > li > a:hover {
   color: #6c5ce7
@@ -173,5 +173,31 @@ a {
 }
 
 
-
+.footer {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.footer > div {
+  padding-left: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 80px;
+}
+.footer > div > div {
+  float: left;
+}
+.footer > div > div.f-logo {
+  padding: 15px;
+  margin: 10px;
+}
+.footer > div > div.f-logo h1 a {
+  color: #000;
+}
+.footer > div > div.f-copy {
+  padding: 10px;
+  margin: 20px;
+  color: #000;
+}
 
