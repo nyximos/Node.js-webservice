@@ -1,4 +1,4 @@
-const majors = require('../models/major'); // 데이터베이스 불러오는거 ㅋ
+const majors = require('../models/major');
 const intros = require('../models/intro');
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
