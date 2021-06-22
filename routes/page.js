@@ -16,12 +16,12 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get('/profile', isLoggedIn, (req, res) => {
-  res.render('profile', { title: '내 정보 - NodeBird' });
-});
 
 router.get('/mypage', isLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
+  //res.render(뷰, 데이터)
+  //views 폴더 기준으로 템플릿 엔진을 찾아서 렌더링함.
+  //views/mypage.html을 렌더링함
 });
 
 router.get('/join', isNotLoggedIn, (req, res) => {
@@ -29,7 +29,7 @@ router.get('/join', isNotLoggedIn, (req, res) => {
 });
 
 router.get('/major', (req, res) => {
-  res.render('major', { title: '회원가입 - NodeBird' });
+  res.render('major', { title: '전공 소개 - NodeBird' });
 });
 
 router.get('/intro', (req, res) => {
@@ -57,23 +57,14 @@ router.get('/questions/edit', (req, res) => {
   res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
 });
 
-router.post('/major', async(req, res) => {
+router.post('/major', async(req, res) => {  // 수정된 버전
   try {
-    const num = await req.body.id;
     const majors = await Major.findOne({
       where: {
-      id: num,
+      id: req.body.id,  // 바로 html에서 입력받은 id를 넣어서 조건 검색
       }
      });
-    const data = [
-      majors.majorName, 
-      majors.subtitle1, 
-      majors.subtitle2, 
-      majors.subtitle3, 
-      majors.content
-    ];
-    console.log(data);
-    res.send(data);
+    res.send(majors); // res.send로 데이터와 함께 응답을 보냄
   } catch (err) {
     console.error(err);
   }
@@ -83,45 +74,19 @@ router.post('/major', async(req, res) => {
 
 router.post('/intro', async(req,res)=> {
   try{
-    const num =await req.body.id;
     const intros = await Intro.findOne({
       where:{
-        id:num,
+        id:req.body.id,
       }
     });
-    const data = [
-      intros.name,
-      intros.birth,
-      intros.email,
-      intros.task,
-      intros.comment,
-    ];
-    console.log(data);
-    res.send(data);
+    res.send(intros);
   }catch(err){
     console.error(err);
   }
 });
 
-
-
-router.get('/', async (req, res, next) => {
-  try {
-    const posts = await Post.findAll({
-      include: {
-        model: User,
-        attributes: ['id', 'nick'],
-      },
-      order: [['createdAt', 'DESC']],
-    });
-    res.render('main', {
-      title: 'NodeBird',
-      twits: posts,
-    });
-  } catch (err) {
-    console.error(err);
-    next(err);
-  }
+router.get('/', (req, res, next) => {
+    res.render('layout', { title: 'NodeBird',});
 });
 
 router.get('/hashtag', async (req, res, next) => {

@@ -80,6 +80,9 @@
 
             <li><button type="input" button class="로그인버튼2" onclick="location.href='/auth/kakao'">카카오톡
                 로그인</button></li>
+                <!-- 버튼 누르면 GET /auth/kakao에서 로그인 전략을 수행되는데, 처음에는 카카오 로그인 창으로 리다이렉트 합니다.
+                     그 창에서 로그인 후 성공 여부 결과를 GET /auth/kakao/callback으로 받습니다. 
+                     이 라우터에서는 카카오 로그인 전략을 다시 수행합니다. -->
           </ul>
         </div>
       </div>

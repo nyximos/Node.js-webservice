@@ -18,10 +18,13 @@ const passportConfig = require('./passport');   // require('./passport/index.js'
 const app = express();
 passportConfig(); // 패스포트 설정
 app.set('port', process.env.PORT || 8001);
-app.set('view engine', 'html');
-nunjucks.configure('views', {
-  express: app,
-  watch: true,
+app.set('view engine', 'html');// view engine은 html의 템플릿 엔진을 사용
+nunjucks.configure('views', { // configure의 첫번째 인수로 views 폴더의 경로 넣고
+                              // 두번째 인수로 옵션을 넣는다.
+                              //넌적스임을 구분하려면 확장자로 njk를 쓰는데 이럴땐
+                              // view engine도 njk로 바꿔야한다.
+  express: app, //express속성에 app 객체 연결
+  watch: true,  //watch옵션이 true이면 HTML파일이 변경될때 템플릿 엔진을 다시 렌더링
 });
 sequelize.sync({ force: false }) //sync를 반드시 호출해줘야 db연결가능
   .then(() => {

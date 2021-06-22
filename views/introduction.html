@@ -140,16 +140,15 @@
     <script>
         async function a(id) {
             try {
-                const res = await axios.post('http://localhost:8001/intro', {
+                const res = await axios.post('/intro', {
                     id,
                 });
                 console.log(res);
-                document.getElementById(11).innerHTML = res.data[0];
-                document.getElementById(12).innerHTML = res.data[1];
-                document.getElementById(13).innerHTML = res.data[2];
-                document.getElementById(14).innerHTML = res.data[3];
-                document.getElementById(15).innerHTML = res.data[4];
-                document.getElementById(16).innerHTML = res.data[5];
+                document.getElementById(11).innerHTML = res.data.name;
+                document.getElementById(12).innerHTML = res.data.birth;
+                document.getElementById(13).innerHTML = res.data.email;
+                document.getElementById(14).innerHTML = res.data.task;
+                document.getElementById(15).innerHTML = res.data.comment;
             } catch (err) {
                 console.error(err);
             }

@@ -38,6 +38,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
 router.post('/questions/write', isLoggedIn, async (req, res, next) => {
   const { title, content } = req.body;
   const { email, nick } = req.user;
+  console.log(req.body);
   try {
     await Question.create({
       title,
@@ -80,7 +81,8 @@ router.get('/logout', isLoggedIn, (req, res) => {
 
 
 // GET /auth/kakao 요청
-router.get('/kakao', passport.authenticate('kakao'));
+router.get('/kakao', passport.authenticate('kakao')); // passport.authenticate('kakao')에서 카카오 로그인 창으로 리다이렉트 합니다.
+                                                      // 카카오에 로그인되어 있다면 뜨지 않지만 안되어있다면 로그인창이 뜨게됩니다.
 
 // GET/auth/kakao/callback 요청
 router.get('/kakao/callback', passport.authenticate('kakao', {

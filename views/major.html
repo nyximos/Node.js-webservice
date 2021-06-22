@@ -69,15 +69,15 @@
     <script>
         async function a(id) {
             try {
-                const res = await axios.post('http://localhost:8001/major', {
+                const res = await axios.post('/major', {
                     id,
                 });
+                document.getElementById(11).innerHTML = res.data.majorName;
+                document.getElementById(12).innerHTML = res.data.subtitle1;
+                document.getElementById(13).innerHTML = res.data.subtitle2;
+                document.getElementById(14).innerHTML = res.data.subtitle3;
+                document.getElementById(15).innerHTML = res.data.content;
                 console.log(res); //받아오는 db값 확인용
-                document.getElementById(11).innerHTML = res.data[0];
-                document.getElementById(12).innerHTML = res.data[1];
-                document.getElementById(13).innerHTML = res.data[2];
-                document.getElementById(14).innerHTML = res.data[3];
-                document.getElementById(15).innerHTML = res.data[4];
             }
             catch (err) {
                 console.error(err);
