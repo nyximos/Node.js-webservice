@@ -107,13 +107,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for user in users %}
+                    {% for question in questions %}
                     <tr>
-                        <td>{{questions.id}}</td>
-                        <td>{{questions.title}}</td>
-                        <td>{{questions.content}}</td>
-                        <td>{{questions.nick}}</td>
-                        <td>{{qeustions.createAt}}</td>
+                        <td>{{question.id}}</td>
+                        <td>{{question.title}}</td>
+                        <td>{{question.content}}</td>
+                        <td>{{question.nick}}</td>
+                        <td>{{question.createAt}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>

@@ -29,6 +29,30 @@ router.route('/')
      }
  });
 
+ router.route('/:id')
+    .patch(async (req, res, next) => {
+        try {
+            const result = await Question.update({
+                content: req.body.content,
+            }, {
+                where: {id: req.params.id },
+            });
+            res.json(result);
+        } catch (err) {
+            console.error(err);
+            next(err);
+        }
+    })
+    .delete(async (req, res, next) => {
+        try {
+            const result = await Question.destroy({ where: {id : req.params.id } });
+            res.json(result);
+        } catch (err) {
+            console.error(err);
+            next(err);
+        }
+    });
+
 
 
 

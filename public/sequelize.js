@@ -36,6 +36,37 @@ async function getUser() {
             td = document.createElement('td');
             td.textContent = questions.createdAt;
             row.appendChild(td);
+            const edit = document.createElement('button');
+            edit.textContent = '수정';
+            edit.addEventListener('click', async () => {
+                const newComment = prompt('바꿀 내용을 입력하세요');
+                if (!newComment) {
+                    return alert('내용을 반드시 입력하셔야 합니다');
+                }
+                try {
+                    await axios.patch(`/question/${questions.id}`, { content: newComment });
+                    getUser();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+            const remove = document.createElement('button');
+            remove.textContent='삭제';
+            remove.addEventListener('click', async () => {
+                try {
+                    await axios.delete(`/question/${questions.id}`);
+                    getUser();
+                } catch (err) {
+                    console.error(err);
+                }
+            });
+            //버튼 추가
+            td = document.createElement('td');
+            td.appendChild(edit);
+            row.appendChild(td);
+            td = document.createElement('td');
+            td.appendChild(remove);
+            row.appendChild(td);
             tbody.appendChild(row); 
         });
     } catch (err) {
@@ -62,38 +93,38 @@ async function getUser() {
 //             td = document.createElement('td');
 //             td.textContent = comment.comment;
 //             row.appendChild(td);
-//             const edit = document.createElement('button');
-//             edit.textContent = '수정';
-//             edit.addEventListener('click', async () => {
-//                 const newComment = prompt('바꿀 내용 입력');
-//                 if (!newComment) {
-//                     return alert('내용 반드시 입력');
-//                 }
-//                 try {
-//                     await axios.patch(`/question${commennt.id}`,{ comment: newComment});
-//                     getComment(id);
-//                 } catch (err) {
-//                     console.error(err);
-//                 }
-//             });
-//             const remove = document.createElement('button');
-//             remove.textContent = '삭제';
-//             remove.addEventListener('click', async () => {
-//                 try{
-//                     await axios.delete(`/question${commennt.id}`);
-//                     getComment(id);
-//                 } catch (err) {
-//                     console.error(err);
-//                 }
-//             });
-//             // 버튼 추가
-//             td = document.createElement('td');
-//             td.appendChild(edit);
-//             row.appendChild(td);
-//             td = document.createElement('td');
-//             td.appendChild(remove);
-//             row.appendChild(td);
-//             tbody.appendChild(row);
+            // const edit = document.createElement('button');
+            // edit.textContent = '수정';
+            // edit.addEventListener('click', async () => {
+            //     const newComment = prompt('바꿀 내용 입력');
+            //     if (!newComment) {
+            //         return alert('내용 반드시 입력');
+            //     }
+            //     try {
+            //         await axios.patch(`/question${commennt.id}`,{ comment: newComment});
+            //         getComment(id);
+            //     } catch (err) {
+            //         console.error(err);
+            //     }
+            // });
+            // const remove = document.createElement('button');
+            // remove.textContent = '삭제';
+            // remove.addEventListener('click', async () => {
+            //     try{
+            //         await axios.delete(`/question${commennt.id}`);
+            //         getComment(id);
+            //     } catch (err) {
+            //         console.error(err);
+            //     }
+            // });
+            // // 버튼 추가
+            // td = document.createElement('td');
+            // td.appendChild(edit);
+            // row.appendChild(td);
+            // td = document.createElement('td');
+            // td.appendChild(remove);
+            // row.appendChild(td);
+            // tbody.appendChild(row);
 //         });
 //     } catch (err) {
 //         console.error(err);

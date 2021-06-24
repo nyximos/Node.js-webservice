@@ -45,6 +45,7 @@ router.get('/mypage', isNotLoggedIn, (req, res) => {
 router.get('/questions', async (req, res, next) => {
   try {
     const questions = await Question.findAll();
+    console.log(questions);
     res.render('questions', { questions });
   } catch (err) {
     console.error(err);
