@@ -129,7 +129,7 @@ router.route('/question_view/:id')
         req.body.updatedAt=Date.now();
         res.send(question);
         res.json(question);
-        res.render('/question');
+        res.render('/question/'+req.params.id);
       } catch (err) {
         console.error(err);
         next(err);
