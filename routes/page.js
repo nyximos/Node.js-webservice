@@ -1,5 +1,6 @@
 const majors = require('../models/major');
 const intros = require('../models/intro');
+const Questions = require('../models/questions')
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const { Post, User, Hashtag, Major, Intro, Question } = require('../models');
@@ -15,6 +16,7 @@ router.use((req, res, next) => {
   res.locals.followerIdList = req.user ? req.user.Followings.map(f => f.id) : [];
   next();
 });
+
 
 
 router.get('/mypage', isLoggedIn, (req, res) => {
@@ -40,8 +42,14 @@ router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
 });
 
-router.get('/questions', (req, res) => {
-  res.render('questions', { title: '질의응답 - NodeBird' });
+router.get('/questions', async (req, res, next) => {
+  try {
+    const questions = await Question.findAll();
+    res.render('questions', { questions });
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
 });
 
 
@@ -69,7 +77,6 @@ router.post('/major', async(req, res) => {  // 수정된 버전
     console.error(err);
   }
 });
-
 
 
 router.post('/intro', async(req,res)=> {

@@ -34,7 +34,6 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
 });
 
 
-// POST /auth/join 요청
 router.post('/questions/write', isLoggedIn, async (req, res, next) => {
   const { title, content } = req.body;
   const { email, nick } = req.user;

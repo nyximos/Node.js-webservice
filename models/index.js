@@ -6,7 +6,7 @@ const Post = require('./post');
 const Hashtag = require('./hashtag');
 const Intro = require('./intro');
 const Major = require('./major');
-const Question = require('./questions')
+const Question = require('./questions');
 
 
 const db = {};

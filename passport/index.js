@@ -8,9 +8,18 @@ module.exports = () => {
     done(null, user.id);
   });
 
-  passport.deserializeUser((id, done) => { 
-    User.findOne({ 
-      where: id ,
+  passport.deserializeUser((id, done) => {
+    User.findOne({
+      where: { id },
+      include: [{
+        model: User,
+        attributes: ['id', 'nick'],
+        as: 'Followers',
+      }, {
+        model: User,
+        attributes: ['id', 'nick'],
+        as: 'Followings',
+      }],
     })
       .then(user => done(null, user)) // req.user 객체
       .catch(err => done(err));
