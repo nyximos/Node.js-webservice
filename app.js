@@ -6,6 +6,7 @@ const session = require('express-session');
 const nunjucks = require('nunjucks');
 const dotenv = require('dotenv');
 const passport = require('passport');
+const methodOverride = require('method-override');
 
 dotenv.config();
 const pageRouter = require('./routes/page');
@@ -34,6 +35,7 @@ sequelize.sync({ force: false }) //sync를 반드시 호출해줘야 db연결가
     console.error(err);
   });
 
+  app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/img', express.static(path.join(__dirname, 'uploads')));

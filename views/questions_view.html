@@ -93,5 +93,21 @@
                 <div class="f-copy"><p>영진전문대학교 웹데이터베이스전공</p></div>
             </div>
         </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            async function getQuestion(){
+                try{
+                    const res = await axios.get('/questions');
+                    const questions = res.data;
+                    console.log(questions);
+                    document.getElementById(id).innerHTML = res.data.id;
+                    document.getElementById(title).innerHTML = res.data.title;
+                    document.getElementById(writer).innerHTML = res.data.writer;
+                    document.getElementById(createAt).innerHTML = res.data.createAt;
+                } catch (err) {
+                    console.error(err);
+                }
+            }
+        </script>
     </body>
 </html>
