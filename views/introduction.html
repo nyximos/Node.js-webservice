@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_intro.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style_intro.css">
+    <title>조원소개</title>
     
 </head>
 
@@ -45,21 +45,22 @@
             </div>
         </div>
     </div>
-     
-        
+    <br><br>
+    
     <div class="contents">        
         <div class = "tableTest">
-            <form id="user-form">
-                <fieldset>
-                    <legend>조원 등록</legend>
-                    <div><input id ="name" type="text" placeholder="이름"></div>
-                    <div><input id = "birth" type="text" placeholder="생년월일"></div>
-                    <div><input id = "task" type="text" placeholder="역할"></div>
-                    <button type="submit">등록</button>
-                </fieldset>
+            <form id="user-form" class="조원등록전체">
+                <br><br><br><br><br><br>
+                <!-- <fieldset> -->
+                    <legend class="조원등록">조원 등록</legend><br>
+                    <div><input id ="name" type="text" class="이름" placeholder="이름"></div><br>
+                    <div><input id = "birth" type="text" class="생년월일" placeholder="생년월일"></div><br>
+                    <div><input id = "task" type="text" class="역할" placeholder="역할"></div><br>
+                    <button type="submit" class="등록">등록</button>
+                <!-- </fieldset> -->
             </form>
-            <br>
-            <table id = "user-list">
+            <br><br>
+            <table id = "user-list" class="게시판">
                 <thead>
                     <tr>
                         <th>이름</th>

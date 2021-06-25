@@ -1,4 +1,3 @@
-/* 초기화 */
 @import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 *,
@@ -6,22 +5,22 @@
 :before {
   box-sizing: inherit;
 }
-dd {
-  margin-inline-start: 0;
-}
+
 html {
-  font-size: 10px;
   height: 1500px;
+  width: 100%;
 }
 div {
   display: block;
 }
 body {
+  position: relative;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-size: 0.75em;
   font-family: "Noto Sans KR";
-  height: 100%;
+  width: 100%;
 }
 h1 {
   font-size: 17px;
@@ -117,16 +116,19 @@ a {
 }
 
 .footer {
-  background: #fff;
+  background: white;
+  bottom: 0px;
   position: absolute;
-  bottom: 0;
+  height: 70px;
+  
 }
+
 .footer > div {
-  padding-left: 20px;
+  bottom: 0%;
+  padding: 0px;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
-  height: 80px;
+  margin-left: 20px;
 }
 .footer > div > div {
   float: left;
@@ -144,26 +146,53 @@ a {
   color: #000;
 }
 
-.contents {
-  position: relative;
-  top: 100px;
-  width: 80vw;
-  left: 180px;
+/* me */
+
+.조원등록전체 {
+    text-align: center;
 }
 
-.tableTest {
-  width: 100%;
-  height: 50%;
-  font-size: 27px;
-  text-align: center;
+.조원등록 {
+  font-size: 30px;
 }
 
-
-table { 
-  border: 1px solid black; 
-  border-collapse: collapse; 
+.게시판 {
+    margin-left:auto; 
+    margin-right:auto;
 }
+
+.이름 {
+  height: 30px;
+  width: 300px;
+}
+
+.생년월일 {
+  height: 30px;
+  width: 300px;
+}
+
+.역할 {
+    height: 30px;
+    width: 300px;
+}
+
+.등록 {
+    height: 30px;
+    width: 50px;
+}
+
+/* 수정 삭제 */
+table {
+    border-collapse: collapse;
+  }
 
 table th, table td {
-   border: 1px solid black; 
-  }
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 15px;
+    
+ }
+
+ th {
+     background-color: lightgrey;
+ }
