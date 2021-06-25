@@ -7,7 +7,6 @@ router.route('/asd')
  .get(async (req, res, next) => {
      try {
          const intros = await Intro.findAll();
-         console.log(intros[0].name);
          res.json(intros);
      } catch (err) {
          console.err(err);
