@@ -8,7 +8,7 @@
 }
 
 html {
-  height: 1500px;
+  height: 1900px;
   width: 100%;
 }
 div {
@@ -367,7 +367,7 @@ a {
 .영역1 {
   position: relative;
   top: 60px;
-  height: 600px;
+  height: 500px;
   text-align: center;
   width: 100%;
   max-width: 1300px;
@@ -398,4 +398,8 @@ a {
   max-width: 1000px ;
 
   
+}
+
+.교수진소개 {
+  display: block;
 }
