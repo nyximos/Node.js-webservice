@@ -403,3 +403,54 @@ a {
 .교수진소개 {
   display: block;
 }
+
+/* me */
+
+.조원등록전체 {
+  text-align: center;
+}
+
+.조원등록 {
+font-size: 30px;
+}
+
+.게시판 {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.이름 {
+height: 30px;
+width: 300px;
+}
+
+.생년월일 {
+height: 30px;
+width: 300px;
+}
+
+.역할 {
+  height: 30px;
+  width: 300px;
+}
+
+.등록 {
+  height: 30px;
+  width: 50px;
+}
+
+/* 수정 삭제 */
+table {
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid lightgray;
+  text-align: center;
+  padding: 15px;
+  
+}
+
+th {
+   background-color: lightgrey;
+}

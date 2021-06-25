@@ -65,7 +65,6 @@ router.get('/questions', async (req, res, next) => {
 router.get('/intro', async (req, res, next) => {
   try {
     const intro = await intros.findAll();
-    console.log(intro[0].name);
     res.render('introduction', { intro });
   } catch (err) {
     console.error(err);

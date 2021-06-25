@@ -60,20 +60,20 @@
         <div id='15' class="영역1_부제목"><b>데이터베이스 관리자와 개발자, 웹솔루션 개발자, 모바일 앱 개발자 양성</b>을 목표로<br> IT직무의 기초에서부터 심화과정까지 실무능력을 배양할 수 있는 교육과정으로 편성</div>
     </div>
     <div class="교수진소개">
-        <form id="user-form">
+        <form id="user-form" class="조원등록전체">
             <fieldset>
-                <legend>사용자 등록</legend>
-                <div><input id="name" type="text" placeholder="이름"></div>
-                <div><input id="email" type="email" placeholder="이메일"></div>
-                <div><input id="phone" type="number" placeholder="전화번호"></div>
-                <div><input id="majorName" type="text" placeholder="전공"></div>
-                <div><input id="place" type="text" placeholder="연구실"></div>
+                <legend class="조원등록">사용자 등록</legend>
+                <div><input id="name" type="text" class = "이름" placeholder="이름"></div>
+                <div><input id="email" type="email" class="역할" placeholder="이메일"></div>
+                <div><input id="phone" type="number" class="생년월일" placeholder="전화번호"></div>
+                <div><input id="majorName" type="text" class="역할" placeholder="전공"></div>
+                <div><input id="place" type="text" class="역할" placeholder="연구실"></div>
                 <button type="submit">등록</button>
             </fieldset>
         </form>
     </div>
     <br>
-    <table id="user-list">
+    <table id="user-list" class="게시판">
         <thead>
             <tr>
                 <th>이름</th>
@@ -81,6 +81,8 @@
                 <th>전화번호</th>
                 <th>전공</th>
                 <th>연구실</th>
+                <th>수정</th>
+                <th>삭제</th>
             </tr>
         </thead>
         <tbody>
