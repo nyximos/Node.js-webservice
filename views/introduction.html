@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_intro.css">
     <title>Document</title>
+    
 </head>
 
 <body>
@@ -44,116 +45,50 @@
             </div>
         </div>
     </div>
-    <div class="내용공간">
-        <div class="내용물">
-            <ul>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a  id='1' onclick='a(this.id)'><img src="/image/1.jpg" alt="사진1"></a>
-                        </div>
-                        <div class="info">
-                            <h2>전상용</h2>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a onclick='a(this.id)' id="2"><img src="/image/2.jpg" alt="사진2"></a>
-                        </div>
-                        <div class="info">
-                            <h2>박진한</h2>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a onclick='a(this.id)' id="3"><img src="/image/3.jpg" alt="사진3"></a>
-                        </div>
-                        <div class="info">
-                            <h2>정다은</h2>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a onclick='a(this.id)' id="4"><img src="/image/4.jpg" alt="사진4"></a>
-                        </div>
-                        <div class="info">
-                            <h2>권혁태</h2>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a onclick='a(this.id)' id="5"><img src="/image/5.jpg" alt="사진5"></a>
-                        </div>
-                        <div class="info">
-                            <h2>박소미</h2>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div class="사진">
-                            <a onclick='a(this.id)' id="6"><img src="/image/6.jpg" alt="사진6"></a>
-                        </div>
-                        <div class="info">
-                            <h2>서지원</h2>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div> 
+     
         
-    <div class="content">        
-        <ul>
-            <div class="내용물2">
-                <li><span class="제목">이름:&ensp;</span><span id="11"></span></li>
-            </div>
-            <div class="내용물2">
-                <li> <span class="제목">생년월일:&ensp;</span><span id="12"></span></li>
-            </div>
-            <div class="내용물2">
-                <li> <span class="제목">이메일:&ensp;</span><span id="13"></span></li>
-            </div>
-            <div class="내용물2">
-                <li><span class="제목">역할:&ensp;</span><span id="14"></span></li>
-            </div>
-            <div class="내용물2">
-                <li><span class="제목">좌우명:&ensp;</span><span id="15"></span></li>
-            </div>
-        </ul>
-    </div>
-    </div>
+    <div class="contents">        
+        <div class = "tableTest">
+            <form id="user-form">
+                <fieldset>
+                    <legend>조원 등록</legend>
+                    <div><input id ="name" type="text" placeholder="이름"></div>
+                    <div><input id = "birth" type="text" placeholder="생년월일"></div>
+                    <div><input id = "task" type="text" placeholder="역할"></div>
+                    <button type="submit">등록</button>
+                </fieldset>
+            </form>
+            <br>
+            <table id = "user-list">
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>생년월일</th>
+                        <th>역할</th>
+                        <th>수정</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for intro in intros %}
+                    <tr>
+                        <td>{{intros.name}}</td>
+                        <td>{{intros.birth}}</td>
+                        <td>{{intros.task}}</td>
+                       
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
     <div class="footer">
-        <div>
+        <!-- <div>
             <div class="f-logo"><h1><a href="/"><span>GetPost</span></a></h1></div>
             <div class="f-copy"><p>영진전문대학교 웹데이터베이스전공</p></div>
-        </div>
+        </div> -->
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-        async function a(id) {
-            try {
-                const res = await axios.post('/intro', {
-                    id,
-                });
-                console.log(res);
-                document.getElementById(11).innerHTML = res.data.name;
-                document.getElementById(12).innerHTML = res.data.birth;
-                document.getElementById(13).innerHTML = res.data.email;
-                document.getElementById(14).innerHTML = res.data.task;
-                document.getElementById(15).innerHTML = res.data.comment;
-            } catch (err) {
-                console.error(err);
-            }
-        };
-    </script>
+    <script src="/sequelize_user.js"></script>
+    <script>window.onload=getUser();</script>
 </body>
 
 </html>

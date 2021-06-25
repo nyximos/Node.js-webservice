@@ -1,13 +1,14 @@
 const express = require('express');
-const Question = require('../models/questions');
+const Intro = require('../models/intro');
 
 const router = express.Router();
 
-router.route('/')
+router.route('/asd')
  .get(async (req, res, next) => {
      try {
-         const questions = await Question.findAll();
-         res.json(questions);
+         const intros = await Intro.findAll();
+         console.log(intros[0].name);
+         res.json(intros);
      } catch (err) {
          console.err(err);
          next(err);
@@ -15,25 +16,24 @@ router.route('/')
  })
  .post(async (req, res, next) => {
      try {
-         const question = await Question.create({
-            title: req.body.title,
-            content: req.body.content,
-            nick : req.user.nick,
-            email: req.user.email,
+         const intro = await Intro.create({
+            name: req.body.name,
+            birth: req.body.birth,
+            task : req.body.task,
          });
-         console.log(question);
-         return res.redirect('/questions');
+         console.log(intro);
+         return res.redirect('/intro');
      } catch (err) {
          console.error(err);
          next(err);
      }
  });
 
- router.route('/:id')
+ router.route('/asd/:id')
  .patch(async (req, res, next) => {
      try {
-         const result = await Question.update({
-             content: req.body.content,
+         const result = await Intro.update({
+             name: req.body.name,
          }, {
              where: {id: req.params.id },
          });
@@ -45,7 +45,7 @@ router.route('/')
  })
  .delete(async (req, res, next) => {
      try {
-         const result = await Question.destroy({ where: {id : req.params.id } });
+         const result = await Intro.destroy({ where: {id : req.params.id } });
          res.json(result);
      } catch (err) {
          console.error(err);
@@ -53,5 +53,4 @@ router.route('/')
      }
  });
 
- 
  module.exports = router;

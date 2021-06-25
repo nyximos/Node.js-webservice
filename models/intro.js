@@ -18,18 +18,12 @@ module.exports = class Intro extends Sequelize.Model {
       type: Sequelize.STRING(15),
       allowNull: true,
     },
-    email: {
-      type: Sequelize.STRING(40),
-      allowNull: false,
-    },
+    
     task:{
       type: Sequelize.STRING(100),
       allowNull: true,
     },
-     comment: {
-         type:Sequelize.TEXT,
-         allowNull: true,
-     },
+    
      //deletedAt: true - soft delete  ,실제로 row자체를 통체로 날리는 것 - hard delete
     }, {
       sequelize: sequelize,          // DB 서버와 연결한 객체 , 모델에 대한 설정

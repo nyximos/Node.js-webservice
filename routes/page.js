@@ -34,9 +34,9 @@ router.get('/major', (req, res) => {
   res.render('major', { title: '전공 소개 - NodeBird' });
 });
 
-router.get('/intro', (req, res) => {
-  res.render('introduction', { title: '조원 소개 - NodeBird' });
-});
+ //router.get('/intro', (req, res) => {
+ //res.render('introduction', { title: '조원 소개 - NodeBird' });
+ //});
 
 router.get('/mypage', isNotLoggedIn, (req, res) => {
   res.render('mypage', { title: '마이페이지 - NodeBird' });
@@ -53,6 +53,16 @@ router.get('/questions', async (req, res, next) => {
   }
 });
 
+router.get('/intro', async (req, res, next) => {
+  try {
+    const intro = await intros.findAll();
+    console.log(intro[0].name);
+    res.render('introduction', { intro });
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+});
 
 router.get('/questions/view', (req, res) => {
   res.render('questions_view', { title: '질의응답_글보기 - NodeBird' });
@@ -80,18 +90,18 @@ router.post('/major', async(req, res) => {  // 수정된 버전
 });
 
 
-router.post('/intro', async(req,res)=> {
-  try{
-    const intros = await Intro.findOne({
-      where:{
-        id:req.body.id,
-      }
-    });
-    res.send(intros);
-  }catch(err){
-    console.error(err);
-  }
-});
+//router.post('/intro', async(req,res)=> {
+//  try{
+//    const intros = await Intro.findOne({
+//      where:{
+//        id:req.body.id,
+//      }
+//    });
+//    res.send(intros);
+//  }catch(err){
+//    console.error(err);
+//  }
+//});
 
 router.get('/', (req, res, next) => {
     res.render('layout', { title: 'NodeBird',});
