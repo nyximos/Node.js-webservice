@@ -7,6 +7,7 @@ const Hashtag = require('./hashtag');
 const Intro = require('./intro');
 const Major = require('./major');
 const Question = require('./questions');
+const Professor = require('./professor');
 
 
 const db = {};
@@ -21,6 +22,7 @@ db.Hashtag = Hashtag;
 db.Intro = Intro;
 db.Major = Major;
 db.Question = Question;
+db.Professor = Professor;
 
 
 User.init(sequelize);
@@ -29,6 +31,7 @@ Hashtag.init(sequelize);
 Intro.init(sequelize); // table이랑 model 이랑 sequelize 랑 mysql연결
 Major.init(sequelize);
 Question.init(sequelize);
+Professor.init(sequelize);
 
 User.associate(db);
 Post.associate(db);
@@ -36,5 +39,6 @@ Hashtag.associate(db);
 Intro.associate(db);
 Major.associate(db);
 Question.associate(db);
+Professor.associate(db);
 
 module.exports = db;

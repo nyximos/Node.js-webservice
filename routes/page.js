@@ -1,6 +1,7 @@
 const majors = require('../models/major');
 const intros = require('../models/intro');
 const Questions = require('../models/questions')
+const Proffesor = require('../models/professor')
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
 const { Post, User, Hashtag, Major, Intro, Question } = require('../models');
@@ -30,8 +31,16 @@ router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', { title: '회원가입 - NodeBird' });
 });
 
-router.get('/major', (req, res) => {
-  res.render('major', { title: '전공 소개 - NodeBird' });
+router.get('/major', async (req, res, next) => {
+  try {
+    const professors = await Proffesor.findAll();
+    console.log(professors);
+    res.render('major', {professors});
+  } catch (err) {
+    console.error(err);
+    next(err);
+  }
+  
 });
 
 router.get('/intro', (req, res) => {
@@ -66,18 +75,18 @@ router.get('/questions/edit', (req, res) => {
   res.render('questions_edit', { title: '질의응답_글수정 - NodeBird' });
 });
 
-router.post('/major', async(req, res) => {  // 수정된 버전
-  try {
-    const majors = await Major.findOne({
-      where: {
-      id: req.body.id,  // 바로 html에서 입력받은 id를 넣어서 조건 검색
-      }
-     });
-    res.send(majors); // res.send로 데이터와 함께 응답을 보냄
-  } catch (err) {
-    console.error(err);
-  }
-});
+// router.post('/major/name', async(req, res) => {  // 수정된 버전
+//   try {
+//     const majors = await Major.findOne({
+//       where: {
+//       id: req.body.id,  // 바로 html에서 입력받은 id를 넣어서 조건 검색
+//       }
+//      });
+//     res.send(majors); // res.send로 데이터와 함께 응답을 보냄
+//   } catch (err) {
+//     console.error(err);
+//   }
+// });
 
 
 router.post('/intro', async(req,res)=> {

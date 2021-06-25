@@ -59,6 +59,42 @@
         <div class="영역1_제목">교육내용</div>
         <div id='15' class="영역1_부제목"><b>데이터베이스 관리자와 개발자, 웹솔루션 개발자, 모바일 앱 개발자 양성</b>을 목표로<br> IT직무의 기초에서부터 심화과정까지 실무능력을 배양할 수 있는 교육과정으로 편성</div>
     </div>
+    <div class="교수진소개">
+        <form id="user-form">
+            <fieldset>
+                <legend>사용자 등록</legend>
+                <div><input id="name" type="text" placeholder="이름"></div>
+                <div><input id="email" type="email" placeholder="이메일"></div>
+                <div><input id="phone" type="number" placeholder="전화번호"></div>
+                <div><input id="majorName" type="text" placeholder="전공"></div>
+                <div><input id="place" type="text" placeholder="연구실"></div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+    <table id="user-list">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>전화번호</th>
+                <th>전공</th>
+                <th>연구실</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for professor in professors %}
+            <tr>
+                <td>{{professor.name}}</td>
+                <td>{{professor.email}}</td>
+                <td>{{professor.phone}}</td>
+                <td>{{professor.majorName}}</td>
+                <td>{{professor.place}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     <div class="footer">
         <div>
             <div class="f-logo"><h1><a href="/"><span>GetPost</span></a></h1></div>
@@ -69,7 +105,7 @@
     <script>
         async function a(id) {
             try {
-                const res = await axios.post('/major', {
+                const res = await axios.post('/major/name', {
                     id,
                 });
                 document.getElementById(11).innerHTML = res.data.majorName;
@@ -84,5 +120,7 @@
             }
         };
     </script>
+    <script src="/sequelize_major.js"></script>
+    <script>window.onload = getUser2();</script>
 </body>
 </html>
